@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DiamondHunt Mobile Dashboard
 // @namespace    com.alorel.diamondhunt-dashboard
-// @version      1.0.0
+// @version      1.0.1
 // @description  Showers you with the glory of Alorel
 // @author       Alorel
 // @include      http*://diamondhunt.app*
@@ -10,6 +10,7 @@
 // @grant        GM_info
 // @run-at       document-end
 // @homepage     https://github.com/Alorel/dhm-dashboard
+// @supportURL   https://github.com/Alorel/dhm-dashboard/issues?q=is%3Aissue+sort%3Aupdated-desc+
 // @resource     bs_css https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css
 // @resource     tooltip_css https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css
 // @icon         https://diamondhunt.app/images/ruby.png
