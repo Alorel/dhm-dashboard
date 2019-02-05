@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DiamondHunt Mobile Dashboard
 // @namespace    com.alorel.diamondhunt-dashboard
-// @version      1.0.1
+// @version      1.0.2
 // @description  Showers you with the glory of Alorel
 // @author       Alorel
 // @include      http*://diamondhunt.app*
@@ -969,15 +969,15 @@ function times1k(v) {
 /*!*******************************!*\
   !*** ./src/lib/items/bars.ts ***!
   \*******************************/
-/*! exports provided: barsNShit */
+/*! exports provided: barCounts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "barsNShit", function() { return barsNShit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "barCounts", function() { return barCounts; });
 /* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
 
-var barsNShit = [
+var barCounts = [
     'bronzeBars',
     'ironBars',
     'silverBars',
@@ -985,7 +985,7 @@ var barsNShit = [
     'promethiumBars',
     'titaniumBars'
 ].map(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameClick);
-barsNShit.push(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameNav('ironBucket', "crafting" /* CRAFTING */), _structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromName('lava'));
+barCounts.push(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameNav('ironBucket', "crafting" /* CRAFTING */), _structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromName('lava'));
 
 
 /***/ }),
@@ -994,40 +994,40 @@ barsNShit.push(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameNav
 /*!********************************!*\
   !*** ./src/lib/items/bonez.ts ***!
   \********************************/
-/*! exports provided: bonesNShit */
+/*! exports provided: boneCounts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bonesNShit", function() { return bonesNShit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "boneCounts", function() { return boneCounts; });
 /* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
 /* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
 
 
-var bonesNShit = [
+var boneCounts = [
     'fishBones',
     'bones',
     'ashes',
     'iceBones'
 ].map(function (n) { return _structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromNameClick(n); });
-bonesNShit.unshift(new _structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"]('bonemealBin.png', Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_0__["getGameValue"])('bonemeal')));
+boneCounts.unshift(new _structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"]('bonemealBin.png', Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_0__["getGameValue"])('bonemeal')));
 
 
 /***/ }),
 
-/***/ "./src/lib/items/cookedFoodNShit.ts":
-/*!******************************************!*\
-  !*** ./src/lib/items/cookedFoodNShit.ts ***!
-  \******************************************/
-/*! exports provided: cookedFoodNShit */
+/***/ "./src/lib/items/cookedFood.ts":
+/*!*************************************!*\
+  !*** ./src/lib/items/cookedFood.ts ***!
+  \*************************************/
+/*! exports provided: cookedFoodCounts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cookedFoodNShit", function() { return cookedFoodNShit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cookedFoodCounts", function() { return cookedFoodCounts; });
 /* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
 
-var cookedFoodNShit = [
+var cookedFoodCounts = [
     'chicken',
     'cheese',
     'honey',
@@ -1049,7 +1049,7 @@ var cookedFoodNShit = [
     'rainbowFish',
     'rainbowFish2'
 ].map(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameClick);
-cookedFoodNShit.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameNav('energy', "exploring" /* EXPLORATION */));
+cookedFoodCounts.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameNav('energy', "exploring" /* EXPLORATION */));
 
 
 /***/ }),
@@ -1058,12 +1058,12 @@ cookedFoodNShit.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fr
 /*!********************************!*\
   !*** ./src/lib/items/herbs.ts ***!
   \********************************/
-/*! exports provided: herbsNShit */
+/*! exports provided: herbCounts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "herbsNShit", function() { return herbsNShit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "herbCounts", function() { return herbCounts; });
 /* harmony import */ var _fn_navigate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../fn/navigate */ "./src/lib/fn/navigate.ts");
 /* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
 
@@ -1075,7 +1075,7 @@ function navToBrewing(e) {
     e.preventDefault();
     Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_0__["navigate"])("brewing" /* BREWING */);
 }
-var herbsNShit = [
+var herbCounts = [
     'dottedGreenLeaf',
     'greenLeaf',
     'limeLeaf',
@@ -1091,17 +1091,17 @@ var herbsNShit = [
 /*!*******************************!*\
   !*** ./src/lib/items/logs.ts ***!
   \*******************************/
-/*! exports provided: logsNShit */
+/*! exports provided: logCounts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logsNShit", function() { return logsNShit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logCounts", function() { return logCounts; });
 /* harmony import */ var _fn_clickDOM__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../fn/clickDOM */ "./src/lib/fn/clickDOM.ts");
 /* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
 
 
-var logsNShit = [
+var logCounts = [
     'logs',
     'oakLogs',
     'entLogs',
@@ -1123,12 +1123,12 @@ var logsNShit = [
 /*!*******************************!*\
   !*** ./src/lib/items/ores.ts ***!
   \*******************************/
-/*! exports provided: oresNShit */
+/*! exports provided: oreCounts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "oresNShit", function() { return oresNShit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "oreCounts", function() { return oreCounts; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es */ "lodash-es");
 /* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_1__);
@@ -1138,12 +1138,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var oresNShit = [
+var oreCounts = [
     _structures_Item__WEBPACK_IMPORTED_MODULE_2__["Item"].fromName('bloodCrystals').nav("shop" /* SHOP */),
     _util_Oilincome__WEBPACK_IMPORTED_MODULE_3__["oilIncomeDisplay"],
     _structures_Item__WEBPACK_IMPORTED_MODULE_2__["Item"].fromName('oil').nav("miningOres" /* MINING_MACHINERY */)
 ];
-oresNShit.push.apply(oresNShit, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"]([
+oreCounts.push.apply(oreCounts, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"]([
     'sapphire',
     'emerald',
     'ruby',
@@ -1165,12 +1165,12 @@ oresNShit.push.apply(oresNShit, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](t
 /*!**********************************!*\
   !*** ./src/lib/items/potions.ts ***!
   \**********************************/
-/*! exports provided: potionsNShit */
+/*! exports provided: potionCounts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "potionsNShit", function() { return potionsNShit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "potionCounts", function() { return potionCounts; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "moment");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
@@ -1190,7 +1190,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var potionsNShit = _consts_potions__WEBPACK_IMPORTED_MODULE_4__["NON_COMBAT_POTIONS"].map(function (i) {
+var potionCounts = _consts_potions__WEBPACK_IMPORTED_MODULE_4__["NON_COMBAT_POTIONS"].map(function (i) {
     var item = _structures_Item__WEBPACK_IMPORTED_MODULE_7__["Item"].fromName(i)
         .addOnClick(function () {
         _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_5__["GM"].unsafeWindow.clicksItem(i);
@@ -1202,7 +1202,7 @@ var potionsNShit = _consts_potions__WEBPACK_IMPORTED_MODULE_4__["NON_COMBAT_POTI
     });
     return item;
 });
-potionsNShit.push.apply(potionsNShit, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_consts_potions__WEBPACK_IMPORTED_MODULE_4__["COMBAT_POTIONS"].map(function (potionName) {
+potionCounts.push.apply(potionCounts, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_consts_potions__WEBPACK_IMPORTED_MODULE_4__["COMBAT_POTIONS"].map(function (potionName) {
     var item = _structures_Item__WEBPACK_IMPORTED_MODULE_7__["Item"].fromName(potionName).forceState('btn-light');
     var mobName$ = Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_6__["getGameValue"])('monsterName');
     var potUsed$ = Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_6__["getGameValue"])(potionName + "Used");
@@ -1220,21 +1220,48 @@ potionsNShit.push.apply(potionsNShit, tslib__WEBPACK_IMPORTED_MODULE_0__["__spre
 
 /***/ }),
 
-/***/ "./src/lib/items/rawFood.ts":
-/*!**********************************!*\
-  !*** ./src/lib/items/rawFood.ts ***!
-  \**********************************/
-/*! exports provided: rawFoodNShit */
+/***/ "./src/lib/items/rares.ts":
+/*!********************************!*\
+  !*** ./src/lib/items/rares.ts ***!
+  \********************************/
+/*! exports provided: rareCounts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rawFoodNShit", function() { return rawFoodNShit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rareCounts", function() { return rareCounts; });
+/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
+
+var rareCounts = [
+    'treasureChest',
+    'treasureMap',
+    'xpLamp10k',
+    'bagOfCash',
+    'hauntedPainting',
+    'hpEmblem1',
+    'hpEmblem1Uncharged',
+    'hpEmblem2',
+    'hpEmblem2Uncharged'
+].map(function (n) { return _structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameClick(n).forceState('btn-success'); });
+
+
+/***/ }),
+
+/***/ "./src/lib/items/rawFood.ts":
+/*!**********************************!*\
+  !*** ./src/lib/items/rawFood.ts ***!
+  \**********************************/
+/*! exports provided: rawFoodCounts */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rawFoodCounts", function() { return rawFoodCounts; });
 /* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
 /* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
 
 
-var rawFoodNShit = [
+var rawFoodCounts = [
     'rawRainbowFish',
     'rawWhale',
     'rawShark',
@@ -1244,10 +1271,10 @@ var rawFoodNShit = [
     'rawSardine',
     'rawShrimp'
 ].map(_structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromNameClick);
-rawFoodNShit.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromName('heat').addOnClick(function () {
+rawFoodCounts.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromName('heat').addOnClick(function () {
     _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_0__["GM"].unsafeWindow.clicksItem(_interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_0__["GM"].unsafeWindow.getOvenType());
 }));
-rawFoodNShit.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromNameNav('bait', "cooking" /* COOKING */));
+rawFoodCounts.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromNameNav('bait', "cooking" /* COOKING */));
 
 
 /***/ }),
@@ -1256,12 +1283,12 @@ rawFoodNShit.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromN
 /*!********************************!*\
   !*** ./src/lib/items/seeds.ts ***!
   \********************************/
-/*! exports provided: seedsNShit */
+/*! exports provided: seedCounts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "seedsNShit", function() { return seedsNShit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "seedCounts", function() { return seedCounts; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _consts_seeds__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../consts/seeds */ "./src/consts/seeds.ts");
 /* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
@@ -1272,16 +1299,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var seedsNShit = _consts_seeds__WEBPACK_IMPORTED_MODULE_1__["seedNames"]
+var seedCounts = _consts_seeds__WEBPACK_IMPORTED_MODULE_1__["seedNames"]
     .map(function (n) { return _structures_Item__WEBPACK_IMPORTED_MODULE_4__["Item"].fromNameNav(n, "farming" /* FARMING */); });
-seedsNShit.push(_SeedTimer__WEBPACK_IMPORTED_MODULE_3__["seedTimer"]);
-seedsNShit.unshift.apply(seedsNShit, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"]([
+seedCounts.push(_SeedTimer__WEBPACK_IMPORTED_MODULE_3__["seedTimer"]);
+seedCounts.unshift.apply(seedCounts, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"]([
     'fishBones',
     'bones',
     'ashes',
     'iceBones'
 ].map(function (n) { return _structures_Item__WEBPACK_IMPORTED_MODULE_4__["Item"].fromNameClick(n); })));
-seedsNShit.unshift(new _structures_Item__WEBPACK_IMPORTED_MODULE_4__["Item"]('bonemealBin.png', Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_2__["getGameValue"])('bonemeal')));
+seedCounts.unshift(new _structures_Item__WEBPACK_IMPORTED_MODULE_4__["Item"]('bonemealBin.png', Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_2__["getGameValue"])('bonemeal')));
 
 
 /***/ }),
@@ -2086,17 +2113,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./lib/fn/navigate */ "./src/lib/fn/navigate.ts");
 /* harmony import */ var _lib_items_bars__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lib/items/bars */ "./src/lib/items/bars.ts");
 /* harmony import */ var _lib_items_bonez__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lib/items/bonez */ "./src/lib/items/bonez.ts");
-/* harmony import */ var _lib_items_cookedFoodNShit__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lib/items/cookedFoodNShit */ "./src/lib/items/cookedFoodNShit.ts");
+/* harmony import */ var _lib_items_cookedFood__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lib/items/cookedFood */ "./src/lib/items/cookedFood.ts");
 /* harmony import */ var _lib_items_herbs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lib/items/herbs */ "./src/lib/items/herbs.ts");
 /* harmony import */ var _lib_items_logs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lib/items/logs */ "./src/lib/items/logs.ts");
 /* harmony import */ var _lib_items_ores__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./lib/items/ores */ "./src/lib/items/ores.ts");
 /* harmony import */ var _lib_items_potions__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./lib/items/potions */ "./src/lib/items/potions.ts");
-/* harmony import */ var _lib_items_rawFood__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lib/items/rawFood */ "./src/lib/items/rawFood.ts");
-/* harmony import */ var _lib_items_seeds__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./lib/items/seeds */ "./src/lib/items/seeds.ts");
-/* harmony import */ var _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./lib/timers/crafting */ "./src/lib/timers/crafting.ts");
-/* harmony import */ var _lib_timers_exploring__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./lib/timers/exploring */ "./src/lib/timers/exploring.ts");
-/* harmony import */ var _lib_timers_farming__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./lib/timers/farming */ "./src/lib/timers/farming.ts");
-/* harmony import */ var _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./lib/timers/woodcutting */ "./src/lib/timers/woodcutting.ts");
+/* harmony import */ var _lib_items_rares__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lib/items/rares */ "./src/lib/items/rares.ts");
+/* harmony import */ var _lib_items_rawFood__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./lib/items/rawFood */ "./src/lib/items/rawFood.ts");
+/* harmony import */ var _lib_items_seeds__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./lib/items/seeds */ "./src/lib/items/seeds.ts");
+/* harmony import */ var _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./lib/timers/crafting */ "./src/lib/timers/crafting.ts");
+/* harmony import */ var _lib_timers_exploring__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./lib/timers/exploring */ "./src/lib/timers/exploring.ts");
+/* harmony import */ var _lib_timers_farming__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./lib/timers/farming */ "./src/lib/timers/farming.ts");
+/* harmony import */ var _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./lib/timers/woodcutting */ "./src/lib/timers/woodcutting.ts");
+
 
 
 
@@ -2120,16 +2149,17 @@ __webpack_require__.r(__webpack_exports__);
 
 var dashboard = document.createElement('div');
 var mkList = Object(_lib_fn_mkList__WEBPACK_IMPORTED_MODULE_5__["createMkListFn"])(dashboard);
-mkList(_lib_timers_exploring__WEBPACK_IMPORTED_MODULE_18__["explorationTimer"], _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_17__["craftingTimer"], _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_20__["woodcuttingTimer"], _lib_timers_farming__WEBPACK_IMPORTED_MODULE_19__["farmingTimer"]);
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_ores__WEBPACK_IMPORTED_MODULE_13__["oresNShit"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_seeds__WEBPACK_IMPORTED_MODULE_16__["seedsNShit"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_bonez__WEBPACK_IMPORTED_MODULE_9__["bonesNShit"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_bars__WEBPACK_IMPORTED_MODULE_8__["barsNShit"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_logs__WEBPACK_IMPORTED_MODULE_12__["logsNShit"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_herbs__WEBPACK_IMPORTED_MODULE_11__["herbsNShit"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_potions__WEBPACK_IMPORTED_MODULE_14__["potionsNShit"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_rawFood__WEBPACK_IMPORTED_MODULE_15__["rawFoodNShit"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_cookedFoodNShit__WEBPACK_IMPORTED_MODULE_10__["cookedFoodNShit"]));
+mkList(_lib_timers_exploring__WEBPACK_IMPORTED_MODULE_19__["explorationTimer"], _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_18__["craftingTimer"], _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_21__["woodcuttingTimer"], _lib_timers_farming__WEBPACK_IMPORTED_MODULE_20__["farmingTimer"]);
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_rares__WEBPACK_IMPORTED_MODULE_15__["rareCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_ores__WEBPACK_IMPORTED_MODULE_13__["oreCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_seeds__WEBPACK_IMPORTED_MODULE_17__["seedCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_bonez__WEBPACK_IMPORTED_MODULE_9__["boneCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_bars__WEBPACK_IMPORTED_MODULE_8__["barCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_logs__WEBPACK_IMPORTED_MODULE_12__["logCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_herbs__WEBPACK_IMPORTED_MODULE_11__["herbCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_potions__WEBPACK_IMPORTED_MODULE_14__["potionCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_rawFood__WEBPACK_IMPORTED_MODULE_16__["rawFoodCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_cookedFood__WEBPACK_IMPORTED_MODULE_10__["cookedFoodCounts"]));
 function initUI(el) {
     Object(_lib_fn_insertAfter__WEBPACK_IMPORTED_MODULE_3__["insertAfter"])(dashboard, el);
 }

@@ -2,7 +2,7 @@ import {MkListNode} from '../fn/mkList';
 import {NavTarget} from '../fn/navigate';
 import {Item} from '../structures/Item';
 
-export const barsNShit: MkListNode<any>[] = [
+export const barCounts: MkListNode<any>[] = [
   'bronzeBars',
   'ironBars',
   'silverBars',
@@ -11,7 +11,7 @@ export const barsNShit: MkListNode<any>[] = [
   'titaniumBars'
 ].map(Item.fromNameClick);
 
-barsNShit.push(
+barCounts.push(
   Item.fromNameNav('ironBucket', NavTarget.CRAFTING),
   Item.fromName('lava')
 );

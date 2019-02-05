@@ -5,16 +5,16 @@ import {NavTarget} from '../fn/navigate';
 import {seedTimer} from '../SeedTimer';
 import {Item} from '../structures/Item';
 
-export const seedsNShit: MkListNode<any>[] = seedNames
+export const seedCounts: MkListNode<any>[] = seedNames
   .map(n => Item.fromNameNav(n, NavTarget.FARMING));
 
-seedsNShit.push(seedTimer);
+seedCounts.push(seedTimer);
 
-seedsNShit.unshift(...[
+seedCounts.unshift(...[
   'fishBones',
   'bones',
   'ashes',
   'iceBones'
 ].map(n => Item.fromNameClick(n)));
 
-seedsNShit.unshift(new Item('bonemealBin.png', getGameValue('bonemeal')));
+seedCounts.unshift(new Item('bonemealBin.png', getGameValue('bonemeal')));

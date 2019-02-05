@@ -1,11 +1,11 @@
 import {getGameValue} from '../fn/getGameValue';
 import {Item} from '../structures/Item';
 
-export const bonesNShit = [
+export const boneCounts = [
   'fishBones',
   'bones',
   'ashes',
   'iceBones'
 ].map(n => Item.fromNameClick(n));
 
-bonesNShit.unshift(new Item('bonemealBin.png', getGameValue('bonemeal')));
+boneCounts.unshift(new Item('bonemealBin.png', getGameValue('bonemeal')));

@@ -2,7 +2,7 @@ import {MkListNode} from '../fn/mkList';
 import {NavTarget} from '../fn/navigate';
 import {Item} from '../structures/Item';
 
-export const cookedFoodNShit: MkListNode<any>[] = [
+export const cookedFoodCounts: MkListNode<any>[] = [
   'chicken',
   'cheese',
   'honey',
@@ -25,4 +25,4 @@ export const cookedFoodNShit: MkListNode<any>[] = [
   'rainbowFish2'
 ].map(Item.fromNameClick);
 
-cookedFoodNShit.unshift(Item.fromNameNav('energy', NavTarget.EXPLORATION));
+cookedFoodCounts.unshift(Item.fromNameNav('energy', NavTarget.EXPLORATION));

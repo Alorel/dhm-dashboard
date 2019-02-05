@@ -11,7 +11,7 @@ function navToBrewing(e: Event) {
   navigate(NavTarget.BREWING);
 }
 
-export const herbsNShit: MkListNode<any>[] = [
+export const herbCounts: MkListNode<any>[] = [
   'dottedGreenLeaf',
   'greenLeaf',
   'limeLeaf',

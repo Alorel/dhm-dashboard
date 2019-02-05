@@ -2,7 +2,7 @@ import {domClickSelector} from '../fn/clickDOM';
 import {MkListNode} from '../fn/mkList';
 import {Item} from '../structures/Item';
 
-export const logsNShit: MkListNode<any>[] = [
+export const logCounts: MkListNode<any>[] = [
   'logs',
   'oakLogs',
   'entLogs',

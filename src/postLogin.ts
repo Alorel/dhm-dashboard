@@ -5,15 +5,16 @@ import {mkElement} from './lib/fn/mkElement';
 import {createMkListFn} from './lib/fn/mkList';
 import {mkSpan} from './lib/fn/mkSpan';
 import {navigate, NavTarget} from './lib/fn/navigate';
-import {barsNShit} from './lib/items/bars';
-import {bonesNShit} from './lib/items/bonez';
-import {cookedFoodNShit} from './lib/items/cookedFoodNShit';
-import {herbsNShit} from './lib/items/herbs';
-import {logsNShit} from './lib/items/logs';
-import {oresNShit} from './lib/items/ores';
-import {potionsNShit} from './lib/items/potions';
-import {rawFoodNShit} from './lib/items/rawFood';
-import {seedsNShit} from './lib/items/seeds';
+import {barCounts} from './lib/items/bars';
+import {boneCounts} from './lib/items/bonez';
+import {cookedFoodCounts} from './lib/items/cookedFood';
+import {herbCounts} from './lib/items/herbs';
+import {logCounts} from './lib/items/logs';
+import {oreCounts} from './lib/items/ores';
+import {potionCounts} from './lib/items/potions';
+import {rareCounts} from './lib/items/rares';
+import {rawFoodCounts} from './lib/items/rawFood';
+import {seedCounts} from './lib/items/seeds';
 import {craftingTimer} from './lib/timers/crafting';
 import {explorationTimer} from './lib/timers/exploring';
 import {farmingTimer} from './lib/timers/farming';
@@ -28,15 +29,16 @@ mkList(
   woodcuttingTimer,
   farmingTimer
 );
-mkList(...oresNShit);
-mkList(...seedsNShit);
-mkList(...bonesNShit);
-mkList(...barsNShit);
-mkList(...logsNShit);
-mkList(...herbsNShit);
-mkList(...potionsNShit);
-mkList(...rawFoodNShit);
-mkList(...cookedFoodNShit);
+mkList(...rareCounts);
+mkList(...oreCounts);
+mkList(...seedCounts);
+mkList(...boneCounts);
+mkList(...barCounts);
+mkList(...logCounts);
+mkList(...herbCounts);
+mkList(...potionCounts);
+mkList(...rawFoodCounts);
+mkList(...cookedFoodCounts);
 
 export function initUI(el: HTMLElement): void {
   insertAfter(dashboard, el);

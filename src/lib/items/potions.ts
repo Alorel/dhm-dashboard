@@ -7,7 +7,7 @@ import {getGameValue} from '../fn/getGameValue';
 import {MkListNode} from '../fn/mkList';
 import {Item} from '../structures/Item';
 
-export const potionsNShit: MkListNode<any>[] = NON_COMBAT_POTIONS.map<MkListNode<any>>(i => {
+export const potionCounts: MkListNode<any>[] = NON_COMBAT_POTIONS.map<MkListNode<any>>(i => {
   const item = Item.fromName(i)
     .addOnClick(() => {
       GM.unsafeWindow.clicksItem(i);
@@ -26,7 +26,7 @@ export const potionsNShit: MkListNode<any>[] = NON_COMBAT_POTIONS.map<MkListNode
   return item;
 });
 
-potionsNShit.push(
+potionCounts.push(
   ...COMBAT_POTIONS.map<MkListNode<any>>(potionName => {
     const item = Item.fromName(potionName).forceState('btn-light');
     const mobName$ = getGameValue<string>('monsterName');

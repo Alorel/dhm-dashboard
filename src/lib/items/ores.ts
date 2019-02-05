@@ -4,12 +4,12 @@ import {NavTarget} from '../fn/navigate';
 import {Item} from '../structures/Item';
 import {oilIncomeDisplay} from './util/Oilincome';
 
-export const oresNShit: MkListNode<any>[] = [
+export const oreCounts: MkListNode<any>[] = [
   Item.fromName('bloodCrystals').nav(NavTarget.SHOP),
   oilIncomeDisplay,
   Item.fromName('oil').nav(NavTarget.MINING_MACHINERY)
 ];
-oresNShit.push(
+oreCounts.push(
   ...[
     'sapphire',
     'emerald',

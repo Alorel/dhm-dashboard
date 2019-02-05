@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DiamondHunt Mobile Dashboard
 // @namespace    com.alorel.diamondhunt-dashboard
-// @version      1.0.1
+// @version      1.0.2
 // @description  Showers you with the glory of Alorel
 // @author       Alorel
 // @include      http*://diamondhunt.app*
