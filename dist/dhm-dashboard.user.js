@@ -2046,7 +2046,7 @@ __webpack_require__.r(__webpack_exports__);
 var FarmingTimer = /** @class */ (function (_super) {
     tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](FarmingTimer, _super);
     function FarmingTimer() {
-        return _super.call(this, '/images/farmingSkill.png', 'tree') || this;
+        return _super.call(this, '/images/farmingSkill.png', 'farm') || this;
     }
     FarmingTimer.prototype.getOnClick = function () {
         return function () {

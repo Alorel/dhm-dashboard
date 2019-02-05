@@ -4,7 +4,7 @@ import {PatchTimer} from '../structures/PatchTimer';
 class FarmingTimer extends PatchTimer {
 
   public constructor() {
-    super('/images/farmingSkill.png', 'tree');
+    super('/images/farmingSkill.png', 'farm');
   }
 
   protected getOnClick(): void | (() => void) {

@@ -3,7 +3,7 @@ Screw tabs - have everything in one place.
 
 -----
 
-[![Preview](https://user-images.githubusercontent.com/4998038/52310425-42dd9b80-299b-11e9-9db1-a592b6545135.gif)](https://user-images.githubusercontent.com/4998038/52310425-42dd9b80-299b-11e9-9db1-a592b6545135.gif)
+[![Preview](https://i.imgur.com/RDNJ4dQ.gif)](https://imgur.com/RDNJ4dQ)
 
 # Browser compatibility
 This was only tested on the latest version of Chrome. Bug reports from inferior browsers will be ignored.
