@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "strictBindCallApply": true,
+    "target": "es5",
+    "noEmitOnError": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "newLine": "lf",
+    "noFallthroughCasesInSwitch": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "importHelpers": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "strict": true,
+    "stripInternal": true,
+    "declaration": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "removeComments": false,
+    "moduleResolution": "node",
+    "downlevelIteration": true,
+    "sourceMap": false,
+    "outDir": "dist",
+    "lib": [
+      "dom",
+      "scripthost",
+      "esnext"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

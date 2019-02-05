@@ -1,0 +1,25 @@
+:host {
+  background: transparent;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+img.item {
+  height: 1em;
+  width: 1em;
+}
+
+.item {
+  display: inline-block;
+  margin-left: 3.33px;
+
+  &:first-child, &:empty:not(input) {
+    margin-left: 0;
+  }
+}
+
+span.item:empty {
+  display: none;
+}

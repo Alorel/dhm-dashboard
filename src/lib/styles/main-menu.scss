@@ -1,0 +1,56 @@
+@mixin fwidth($width) {
+  @media (min-width: $width) {
+    :host {
+      width: 230px + (($width - 1000px) * 0.5);
+    }
+  }
+}
+
+:host {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+hr {
+  margin: 0;
+  border-width: 1px 0 0 0;
+  border-color: #fff;
+}
+
+ul.inline {
+  padding-left: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: -5px;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+@media (min-width: 1000px) {
+  :host {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 230px;
+    box-shadow: 2px 2px 10px 0 #000;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px ridge silver;
+  }
+}
+
+@include fwidth(1100px);
+@include fwidth(1200px);
+@include fwidth(1300px);
+@include fwidth(1400px);
+@include fwidth(1500px);
+@include fwidth(1600px);
+@include fwidth(1700px);
+@include fwidth(1800px);
+@include fwidth(1900px);

@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "@alorel-personal/tslint-rules"
+  ],
+  "rules": {
+    "no-var-requires": false,
+    "import-blacklist": false,
+    "no-unbound-method": false,
+    "no-magic-numbers": false,
+    "max-classes-per-file": false,
+    "max-file-line-count": false
+  }
+}
