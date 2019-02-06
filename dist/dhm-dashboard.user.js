@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DiamondHunt Mobile Dashboard
 // @namespace    com.alorel.diamondhunt-dashboard
-// @version      1.0.2
+// @version      1.1.0
 // @description  Showers you with the glory of Alorel
 // @author       Alorel
 // @include      http*://diamondhunt.app*
@@ -378,6 +378,29 @@ function LazyGetter(setProto, makeNonConfigurable) {
     };
 }
 //# sourceMappingURL=LazyGetter.js.map
+
+/***/ }),
+
+/***/ "./src/consts/areas.ts":
+/*!*****************************!*\
+  !*** ./src/consts/areas.ts ***!
+  \*****************************/
+/*! exports provided: areas */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "areas", function() { return areas; });
+var areas = [
+    'fields',
+    'forests',
+    'caves',
+    'volcano',
+    'northernFields',
+    'hauntedMansion',
+    'desert'
+];
+
 
 /***/ }),
 
@@ -1050,6 +1073,72 @@ var cookedFoodCounts = [
     'rainbowFish2'
 ].map(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameClick);
 cookedFoodCounts.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameNav('energy', "exploring" /* EXPLORATION */));
+
+
+/***/ }),
+
+/***/ "./src/lib/items/exploringGoodies.ts":
+/*!*******************************************!*\
+  !*** ./src/lib/items/exploringGoodies.ts ***!
+  \*******************************************/
+/*! exports provided: exploringGoodies */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exploringGoodies", function() { return exploringGoodies; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es */ "lodash-es");
+/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _consts_areas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../consts/areas */ "./src/consts/areas.ts");
+/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
+
+
+
+
+var artifacts = [
+    'brokenSwordArtifact',
+    'cannonBallsArtifact',
+    'oldCannonArtifact',
+    'strangeLeafArtifact',
+    'ancientLogArtifact',
+    'rainbowFlowerArtifact',
+    'clayVaseArtifact',
+    'batWingArtifact',
+    'skullArtifact',
+    'sulferArtifact',
+    'volcanicRockArtifact',
+    'volcanicSmokeArtifact',
+    'iceArtifact',
+    'snowballsArtifact',
+    'frozenHeadArtifact',
+    'spiderLegsArtifact',
+    'broomArtifact',
+    'hauntedSkullArtifact'
+];
+var lootBags = _consts_areas__WEBPACK_IMPORTED_MODULE_2__["areas"].map(function (a) { return a + "Loot"; });
+lootBags.push.apply(lootBags, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](lootBags.map(function (t) { return "shiny" + Object(lodash_es__WEBPACK_IMPORTED_MODULE_1__["upperFirst"])(t); })));
+var statues = [
+    'bronze',
+    'iron',
+    'silver',
+    'gold',
+    'promethium',
+    'titanium'
+].reduce(function (acc, type) {
+    for (var i = 1; i <= 4; i++) {
+        var name_1 = type + "StatueMetalDetector";
+        if (i !== 1) {
+            name_1 += i.toString();
+        }
+        acc.push(name_1);
+    }
+    return acc;
+}, []);
+var exploringGoodies = artifacts
+    .concat(lootBags)
+    .concat(statues)
+    .map(_structures_Item__WEBPACK_IMPORTED_MODULE_3__["Item"].fromNameClick);
 
 
 /***/ }),
@@ -2114,17 +2203,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_items_bars__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lib/items/bars */ "./src/lib/items/bars.ts");
 /* harmony import */ var _lib_items_bonez__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lib/items/bonez */ "./src/lib/items/bonez.ts");
 /* harmony import */ var _lib_items_cookedFood__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lib/items/cookedFood */ "./src/lib/items/cookedFood.ts");
-/* harmony import */ var _lib_items_herbs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lib/items/herbs */ "./src/lib/items/herbs.ts");
-/* harmony import */ var _lib_items_logs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lib/items/logs */ "./src/lib/items/logs.ts");
-/* harmony import */ var _lib_items_ores__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./lib/items/ores */ "./src/lib/items/ores.ts");
-/* harmony import */ var _lib_items_potions__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./lib/items/potions */ "./src/lib/items/potions.ts");
-/* harmony import */ var _lib_items_rares__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lib/items/rares */ "./src/lib/items/rares.ts");
-/* harmony import */ var _lib_items_rawFood__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./lib/items/rawFood */ "./src/lib/items/rawFood.ts");
-/* harmony import */ var _lib_items_seeds__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./lib/items/seeds */ "./src/lib/items/seeds.ts");
-/* harmony import */ var _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./lib/timers/crafting */ "./src/lib/timers/crafting.ts");
-/* harmony import */ var _lib_timers_exploring__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./lib/timers/exploring */ "./src/lib/timers/exploring.ts");
-/* harmony import */ var _lib_timers_farming__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./lib/timers/farming */ "./src/lib/timers/farming.ts");
-/* harmony import */ var _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./lib/timers/woodcutting */ "./src/lib/timers/woodcutting.ts");
+/* harmony import */ var _lib_items_exploringGoodies__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lib/items/exploringGoodies */ "./src/lib/items/exploringGoodies.ts");
+/* harmony import */ var _lib_items_herbs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lib/items/herbs */ "./src/lib/items/herbs.ts");
+/* harmony import */ var _lib_items_logs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./lib/items/logs */ "./src/lib/items/logs.ts");
+/* harmony import */ var _lib_items_ores__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./lib/items/ores */ "./src/lib/items/ores.ts");
+/* harmony import */ var _lib_items_potions__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lib/items/potions */ "./src/lib/items/potions.ts");
+/* harmony import */ var _lib_items_rares__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./lib/items/rares */ "./src/lib/items/rares.ts");
+/* harmony import */ var _lib_items_rawFood__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./lib/items/rawFood */ "./src/lib/items/rawFood.ts");
+/* harmony import */ var _lib_items_seeds__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./lib/items/seeds */ "./src/lib/items/seeds.ts");
+/* harmony import */ var _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./lib/timers/crafting */ "./src/lib/timers/crafting.ts");
+/* harmony import */ var _lib_timers_exploring__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./lib/timers/exploring */ "./src/lib/timers/exploring.ts");
+/* harmony import */ var _lib_timers_farming__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./lib/timers/farming */ "./src/lib/timers/farming.ts");
+/* harmony import */ var _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./lib/timers/woodcutting */ "./src/lib/timers/woodcutting.ts");
+
 
 
 
@@ -2149,17 +2240,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var dashboard = document.createElement('div');
 var mkList = Object(_lib_fn_mkList__WEBPACK_IMPORTED_MODULE_5__["createMkListFn"])(dashboard);
-mkList(_lib_timers_exploring__WEBPACK_IMPORTED_MODULE_19__["explorationTimer"], _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_18__["craftingTimer"], _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_21__["woodcuttingTimer"], _lib_timers_farming__WEBPACK_IMPORTED_MODULE_20__["farmingTimer"]);
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_rares__WEBPACK_IMPORTED_MODULE_15__["rareCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_ores__WEBPACK_IMPORTED_MODULE_13__["oreCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_seeds__WEBPACK_IMPORTED_MODULE_17__["seedCounts"]));
+mkList(_lib_timers_exploring__WEBPACK_IMPORTED_MODULE_20__["explorationTimer"], _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_19__["craftingTimer"], _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_22__["woodcuttingTimer"], _lib_timers_farming__WEBPACK_IMPORTED_MODULE_21__["farmingTimer"]);
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_rares__WEBPACK_IMPORTED_MODULE_16__["rareCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_ores__WEBPACK_IMPORTED_MODULE_14__["oreCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_seeds__WEBPACK_IMPORTED_MODULE_18__["seedCounts"]));
 mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_bonez__WEBPACK_IMPORTED_MODULE_9__["boneCounts"]));
 mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_bars__WEBPACK_IMPORTED_MODULE_8__["barCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_logs__WEBPACK_IMPORTED_MODULE_12__["logCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_herbs__WEBPACK_IMPORTED_MODULE_11__["herbCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_potions__WEBPACK_IMPORTED_MODULE_14__["potionCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_rawFood__WEBPACK_IMPORTED_MODULE_16__["rawFoodCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_logs__WEBPACK_IMPORTED_MODULE_13__["logCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_herbs__WEBPACK_IMPORTED_MODULE_12__["herbCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_potions__WEBPACK_IMPORTED_MODULE_15__["potionCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_rawFood__WEBPACK_IMPORTED_MODULE_17__["rawFoodCounts"]));
 mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_cookedFood__WEBPACK_IMPORTED_MODULE_10__["cookedFoodCounts"]));
+mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_exploringGoodies__WEBPACK_IMPORTED_MODULE_11__["exploringGoodies"]));
 function initUI(el) {
     Object(_lib_fn_insertAfter__WEBPACK_IMPORTED_MODULE_3__["insertAfter"])(dashboard, el);
 }

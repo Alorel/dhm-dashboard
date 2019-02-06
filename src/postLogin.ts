@@ -8,6 +8,7 @@ import {navigate, NavTarget} from './lib/fn/navigate';
 import {barCounts} from './lib/items/bars';
 import {boneCounts} from './lib/items/bonez';
 import {cookedFoodCounts} from './lib/items/cookedFood';
+import {exploringGoodies} from './lib/items/exploringGoodies';
 import {herbCounts} from './lib/items/herbs';
 import {logCounts} from './lib/items/logs';
 import {oreCounts} from './lib/items/ores';
@@ -39,6 +40,7 @@ mkList(...herbCounts);
 mkList(...potionCounts);
 mkList(...rawFoodCounts);
 mkList(...cookedFoodCounts);
+mkList(...exploringGoodies);
 
 export function initUI(el: HTMLElement): void {
   insertAfter(dashboard, el);
