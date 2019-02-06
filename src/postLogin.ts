@@ -6,7 +6,7 @@ import {createMkListFn} from './lib/fn/mkList';
 import {mkSpan} from './lib/fn/mkSpan';
 import {navigate, NavTarget} from './lib/fn/navigate';
 import {barCounts} from './lib/items/bars';
-import {boneCounts} from './lib/items/bonez';
+import {boneCounts} from './lib/items/bones';
 import {cookedFoodCounts} from './lib/items/cookedFood';
 import {exploringGoodies} from './lib/items/exploringGoodies';
 import {herbCounts} from './lib/items/herbs';

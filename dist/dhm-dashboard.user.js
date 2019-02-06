@@ -104,39 +104,53 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/dhm-dashboard.user.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
 
-/***/ "./node_modules/tslib/tslib.es6.js":
-/*!*****************************************!*\
-  !*** ./node_modules/tslib/tslib.es6.js ***!
-  \*****************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault */
+module.exports = rxjs["operators"];
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = _;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = rxjs;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = moment;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = ":host{background:transparent;display:inline-block;font-size:12px;margin-top:5px;margin-bottom:5px}img.item{height:1em;width:1em}.item{display:inline-block;margin-left:3.33px}.item:first-child,.item:empty:not(input){margin-left:0}span.item:empty{display:none}\n"
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = ":host{display:block;background:rgba(0,0,0,0.5);padding:5px;border-radius:5px}hr{margin:0;border-width:1px 0 0 0;border-color:#fff}ul.inline{padding-left:0;margin-top:5px;margin-bottom:5px;margin-left:-5px;list-style:none}ul.inline>li{display:inline-block;padding-right:5px;padding-left:5px}@media (min-width: 1000px){:host{position:fixed;top:5px;left:5px;width:230px;box-shadow:2px 2px 10px 0 #000;background:rgba(0,0,0,0.2);border:1px ridge silver}}@media (min-width: 1100px){:host{width:280px}}@media (min-width: 1200px){:host{width:330px}}@media (min-width: 1300px){:host{width:380px}}@media (min-width: 1400px){:host{width:430px}}@media (min-width: 1500px){:host{width:480px}}@media (min-width: 1600px){:host{width:530px}}@media (min-width: 1700px){:host{width:580px}}@media (min-width: 1800px){:host{width:630px}}@media (min-width: 1900px){:host{width:680px}}\n"
+
+/***/ }),
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+
+// CONCATENATED MODULE: ./node_modules/tslib/tslib.es6.js
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -324,19 +338,48 @@ function __importDefault(mod) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
 
+// CONCATENATED MODULE: ./src/interfaces/greasemonkey.ts
+var GM = {
+    getResourceText: GM_getResourceText,
+    info: GM_info,
+    unsafeWindow: unsafeWindow
+};
 
-/***/ }),
+// CONCATENATED MODULE: ./src/lib/fn/addCssClasses.ts
+//tslint:disable:max-line-length
 
-/***/ "./node_modules/typescript-lazy-get-decorator/esm5/LazyGetter.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/typescript-lazy-get-decorator/esm5/LazyGetter.js ***!
-  \***********************************************************************/
-/*! exports provided: LazyGetter */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+function addCssClases(el) {
+    var classes = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        classes[_i - 1] = arguments[_i];
+    }
+    var _a;
+    if (typeof el === 'string') {
+        el = document.createElement(el);
+    }
+    (_a = el.classList).add.apply(_a, __spread(classes));
+    return el;
+}
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LazyGetter", function() { return LazyGetter; });
+// CONCATENATED MODULE: ./src/lib/fn/insertAfter.ts
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+// CONCATENATED MODULE: ./src/lib/fn/mkElement.ts
+function mkElement(name, text, asHTML) {
+    var el = document.createElement(name);
+    el[asHTML ? 'innerHTML' : 'innerText'] = text;
+    return el;
+}
+
+// CONCATENATED MODULE: ./src/interfaces/HideableUIItem.ts
+function isHideableUIItem(v) {
+    return !!v && typeof v.shouldHideFromUI === 'function' &&
+        typeof v.extractDomElement === 'function';
+}
+
+// CONCATENATED MODULE: ./node_modules/typescript-lazy-get-decorator/esm5/LazyGetter.js
 /**
  * Evaluate the getter function and cache the result
  * @param {boolean} [setProto=false] Set the value on the class prototype as well. Only applies to non-static getters.
@@ -378,326 +421,7 @@ function LazyGetter(setProto, makeNonConfigurable) {
     };
 }
 //# sourceMappingURL=LazyGetter.js.map
-
-/***/ }),
-
-/***/ "./src/consts/areas.ts":
-/*!*****************************!*\
-  !*** ./src/consts/areas.ts ***!
-  \*****************************/
-/*! exports provided: areas */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "areas", function() { return areas; });
-var areas = [
-    'fields',
-    'forests',
-    'caves',
-    'volcano',
-    'northernFields',
-    'hauntedMansion',
-    'desert'
-];
-
-
-/***/ }),
-
-/***/ "./src/consts/potions.ts":
-/*!*******************************!*\
-  !*** ./src/consts/potions.ts ***!
-  \*******************************/
-/*! exports provided: INSTANT_POTIONS, DURATION_POTIONS, COMBAT_POTIONS, NON_COMBAT_POTIONS */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "INSTANT_POTIONS", function() { return INSTANT_POTIONS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DURATION_POTIONS", function() { return DURATION_POTIONS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMBAT_POTIONS", function() { return COMBAT_POTIONS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NON_COMBAT_POTIONS", function() { return NON_COMBAT_POTIONS; });
-var INSTANT_POTIONS = [
-    'superCompostPotion',
-    'woodcuttingUpgradePotion'
-];
-var DURATION_POTIONS = [
-    'furnaceSpeedPotion',
-    'treeCompostPotion',
-    'woodcuttingXpPotion',
-    'seedFinderPotion',
-    'compostPotion',
-    'fastCompostPotion',
-    'farmingXpPotion',
-    'fishingSpeedPotion',
-    'baitPotion',
-    'exploringSpeedPotion',
-    'oilPotion',
-    'coinPotion'
-];
-var COMBAT_POTIONS = [
-    'hpCombatPotion',
-    'freezeCombatPotion'
-];
-var NON_COMBAT_POTIONS = INSTANT_POTIONS.concat(DURATION_POTIONS);
-
-
-/***/ }),
-
-/***/ "./src/consts/seeds.ts":
-/*!*****************************!*\
-  !*** ./src/consts/seeds.ts ***!
-  \*****************************/
-/*! exports provided: seedGrowTimes, seedNames */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "seedGrowTimes", function() { return seedGrowTimes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "seedNames", function() { return seedNames; });
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es */ "lodash-es");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_0__);
-
-var seedGrowTimes = {
-    appleTreeSeeds: 6 * 3600000,
-    crystalLeafSeeds: 3 * 3600000,
-    dottedGreenLeafSeeds: 15 * 60000,
-    goldLeafSeeds: 2 * 3600000,
-    greenLeafSeeds: 30 * 60000,
-    hauntedTreeSeeds: 12 * 3600000,
-    limeLeafSeeds: 3600000,
-    mapleTreeSeeds: 6 * 3600000,
-    oakTreeSeeds: 2 * 3600000,
-    pineTreeSeeds: 36000000,
-    redMushroomSeeds: 15 * 60000,
-    redwoodTreeSeeds: 8 * 3600000,
-    treeSeeds: 3600000,
-    willowTreeSeeds: 4 * 3600000
-};
-var seedNames = Object(lodash_es__WEBPACK_IMPORTED_MODULE_0__["sortBy"])(Object.keys(seedGrowTimes), function (k) { return seedGrowTimes[k]; });
-
-
-/***/ }),
-
-/***/ "./src/dhm-dashboard.user.ts":
-/*!***********************************!*\
-  !*** ./src/dhm-dashboard.user.ts ***!
-  \***********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lib_fn_isLoggedIn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/fn/isLoggedIn */ "./src/lib/fn/isLoggedIn.ts");
-
-var loginInterval = setInterval(function () {
-    var el = document.getElementById('top-status-bar');
-    if (el && Object(_lib_fn_isLoggedIn__WEBPACK_IMPORTED_MODULE_0__["isLoggedIn"])()) {
-        __webpack_require__(/*! ./postLogin */ "./src/postLogin.ts").initUI(el);
-        clearInterval(loginInterval);
-    }
-}, 1000);
-// Tweak and fix icon
-var icon = document.querySelector('link[rel="icon"]');
-if (icon) {
-    icon.href = '/images/ruby.png';
-}
-//The icon gets appended to doc body atm, which is wrong
-icon = document.querySelector('body link[rel="icon"]');
-if (icon) {
-    document.head.appendChild(icon);
-}
-
-
-/***/ }),
-
-/***/ "./src/interfaces/HideableUIItem.ts":
-/*!******************************************!*\
-  !*** ./src/interfaces/HideableUIItem.ts ***!
-  \******************************************/
-/*! exports provided: isHideableUIItem */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isHideableUIItem", function() { return isHideableUIItem; });
-function isHideableUIItem(v) {
-    return !!v && typeof v.shouldHideFromUI === 'function' &&
-        typeof v.extractDomElement === 'function';
-}
-
-
-/***/ }),
-
-/***/ "./src/interfaces/greasemonkey.ts":
-/*!****************************************!*\
-  !*** ./src/interfaces/greasemonkey.ts ***!
-  \****************************************/
-/*! exports provided: GM */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GM", function() { return GM; });
-var GM = {
-    getResourceText: GM_getResourceText,
-    info: GM_info,
-    unsafeWindow: unsafeWindow
-};
-
-
-/***/ }),
-
-/***/ "./src/lib/SeedTimer.ts":
-/*!******************************!*\
-  !*** ./src/lib/SeedTimer.ts ***!
-  \******************************/
-/*! exports provided: seedTimer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "seedTimer", function() { return seedTimer; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es */ "lodash-es");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "moment");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "rxjs");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _consts_seeds__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../consts/seeds */ "./src/consts/seeds.ts");
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-/* harmony import */ var _fn_addStyle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./fn/addStyle */ "./src/lib/fn/addStyle.ts");
-/* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
-/* harmony import */ var _fn_navigate__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./fn/navigate */ "./src/lib/fn/navigate.ts");
-/* harmony import */ var _structures_ReadiableMenuItem__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./structures/ReadiableMenuItem */ "./src/lib/structures/ReadiableMenuItem.ts");
-
-
-
-
-
-
-
-
-
-
-
-function getDivider() {
-    var obs$ = Object(lodash_es__WEBPACK_IMPORTED_MODULE_1__["range"])(1, 7).map(function (i) { return Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_8__["getGameValue"])("farmUnlocked" + i); });
-    return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["combineLatest"])(obs$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (unlockStates) {
-        var e_1, _a;
-        var out = 0;
-        try {
-            for (var unlockStates_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__values"](unlockStates), unlockStates_1_1 = unlockStates_1.next(); !unlockStates_1_1.done; unlockStates_1_1 = unlockStates_1.next()) {
-                var us = unlockStates_1_1.value;
-                out += us;
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (unlockStates_1_1 && !unlockStates_1_1.done && (_a = unlockStates_1.return)) _a.call(unlockStates_1);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-        return Math.max(1, out);
-    }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["distinctUntilChanged"])());
-}
-var SeedTimer = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](SeedTimer, _super);
-    function SeedTimer() {
-        var _this = _super.call(this, '/images/clock_white.png') || this;
-        Object(_fn_addStyle__WEBPACK_IMPORTED_MODULE_7__["addStyle"])(_this.root, _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_6__["GM"].getResourceText("tooltip_css" /* TOOLTIP_CSS */));
-        _this.innerContainer.setAttribute('data-balloon-pos', 'up');
-        _this.computeValue().subscribe(function (v) {
-            var dur = Object(moment__WEBPACK_IMPORTED_MODULE_2__["duration"])(v);
-            var out = [
-                dur.hours(),
-                dur.minutes(),
-                dur.seconds()
-            ];
-            if (dur.days()) {
-                out.unshift(dur.days());
-            }
-            var txt = out.map(function (num) { return Object(lodash_es__WEBPACK_IMPORTED_MODULE_1__["padStart"])(num.toString(), 2, '0'); }).join(':');
-            _this.innerContainer.setAttribute('data-balloon', txt);
-        });
-        return _this;
-    }
-    SeedTimer.prototype.computeValue = function () {
-        return getDivider().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(function (divider) {
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["combineLatest"])(_consts_seeds__WEBPACK_IMPORTED_MODULE_5__["seedNames"].map(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_8__["getGameValue"])).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (counts) {
-                var out = 0;
-                for (var i = 0; i < counts.length; i++) {
-                    out += counts[i] * _consts_seeds__WEBPACK_IMPORTED_MODULE_5__["seedGrowTimes"][_consts_seeds__WEBPACK_IMPORTED_MODULE_5__["seedNames"][i]];
-                }
-                return Math.floor(out / divider);
-            }));
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["distinctUntilChanged"])());
-    };
-    SeedTimer.prototype.getOnClick = function () {
-        return function () {
-            Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_9__["navigate"])("farming" /* FARMING */);
-        };
-    };
-    SeedTimer.prototype.getReadyClasses = function () {
-        return ['btn-danger'];
-    };
-    SeedTimer.prototype.readyMapper = function (value) {
-        return value === 0;
-    };
-    SeedTimer.prototype.valueStringifier = function (value) {
-        return this.readyMapper(value) ? 'Done' : Object(moment__WEBPACK_IMPORTED_MODULE_2__["duration"])(value).humanize();
-    };
-    return SeedTimer;
-}(_structures_ReadiableMenuItem__WEBPACK_IMPORTED_MODULE_10__["ReadiableMenuItem"]));
-var seedTimer = new SeedTimer();
-
-
-/***/ }),
-
-/***/ "./src/lib/fn/addCssClasses.ts":
-/*!*************************************!*\
-  !*** ./src/lib/fn/addCssClasses.ts ***!
-  \*************************************/
-/*! exports provided: addCssClases */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addCssClases", function() { return addCssClases; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-//tslint:disable:max-line-length
-
-function addCssClases(el) {
-    var classes = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        classes[_i - 1] = arguments[_i];
-    }
-    var _a;
-    if (typeof el === 'string') {
-        el = document.createElement(el);
-    }
-    (_a = el.classList).add.apply(_a, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](classes));
-    return el;
-}
-document.createElement('div');
-
-
-/***/ }),
-
-/***/ "./src/lib/fn/addStyle.ts":
-/*!********************************!*\
-  !*** ./src/lib/fn/addStyle.ts ***!
-  \********************************/
-/*! exports provided: addStyle */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addStyle", function() { return addStyle; });
+// CONCATENATED MODULE: ./src/lib/fn/addStyle.ts
 function addStyle(el, css) {
     var style = document.createElement('style');
     style.innerText = css;
@@ -705,162 +429,102 @@ function addStyle(el, css) {
     return el;
 }
 
+// CONCATENATED MODULE: ./src/lib/structures/IconMenuItem.ts
 
-/***/ }),
 
-/***/ "./src/lib/fn/clickDOM.ts":
-/*!********************************!*\
-  !*** ./src/lib/fn/clickDOM.ts ***!
-  \********************************/
-/*! exports provided: domClickID, domClickSelector */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "domClickID", function() { return domClickID; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "domClickSelector", function() { return domClickSelector; });
-function clickCommon(el) {
-    if (el) {
-        el.click();
-        return true;
+
+var IconMenuItem_IconMenuItem = /** @class */ (function () {
+    function IconMenuItem(imgUrl, label) {
+        this.imgUrl = imgUrl;
+        this.label = label || '';
+        var onClick = this.getOnClick();
+        if (onClick) {
+            this.root.addEventListener('click', onClick);
+        }
+        addStyle(this.root, __webpack_require__(4));
+        this.root.appendChild(this.innerContainer);
+        this.innerContainer.appendChild(this.img);
+        this.innerContainer.appendChild(this.labelElement);
     }
-    return false;
-}
-function domClickID(id) {
-    if (!clickCommon(document.getElementById(id))) {
-        throw new Error("Unable to click DOM ID " + id);
-    }
-}
-function domClickSelector(selector) {
-    if (!clickCommon(document.querySelector(selector))) {
-        throw new Error("Unable to click selector \"" + selector + "\"");
-    }
-}
+    Object.defineProperty(IconMenuItem.prototype, "container", {
+        get: function () {
+            return document.createElement('div');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(IconMenuItem.prototype, "img", {
+        get: function () {
+            return addCssClases('img', 'item');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(IconMenuItem.prototype, "imgUrl", {
+        get: function () {
+            return this.img.src;
+        },
+        set: function (v) {
+            this.img.src = v;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(IconMenuItem.prototype, "innerContainer", {
+        get: function () {
+            return addCssClases('span', 'btn', 'btn-sm', 'btn-dark');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(IconMenuItem.prototype, "label", {
+        get: function () {
+            return this.labelElement.innerHTML;
+        },
+        set: function (v) {
+            this.labelElement.innerHTML = v;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(IconMenuItem.prototype, "labelElement", {
+        get: function () {
+            return addCssClases('span', 'item');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(IconMenuItem.prototype, "root", {
+        get: function () {
+            return this.container.attachShadow({ mode: 'closed' });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    IconMenuItem.prototype.getOnClick = function () {
+        // none
+    };
+    __decorate([
+        LazyGetter()
+    ], IconMenuItem.prototype, "container", null);
+    __decorate([
+        LazyGetter()
+    ], IconMenuItem.prototype, "img", null);
+    __decorate([
+        LazyGetter()
+    ], IconMenuItem.prototype, "innerContainer", null);
+    __decorate([
+        LazyGetter()
+    ], IconMenuItem.prototype, "labelElement", null);
+    __decorate([
+        LazyGetter()
+    ], IconMenuItem.prototype, "root", null);
+    return IconMenuItem;
+}());
 
 
-/***/ }),
-
-/***/ "./src/lib/fn/distinctUntilObjectChanged.ts":
-/*!**************************************************!*\
-  !*** ./src/lib/fn/distinctUntilObjectChanged.ts ***!
-  \**************************************************/
-/*! exports provided: distinctUntilObjectChanged */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "distinctUntilObjectChanged", function() { return distinctUntilObjectChanged; });
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es */ "lodash-es");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function distinctUntilObjectChanged() {
-    return Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["distinctUntilChanged"])(lodash_es__WEBPACK_IMPORTED_MODULE_0__["isEqual"]);
-}
-distinctUntilObjectChanged.cloned = function () {
-    return Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["distinctUntilChanged"])(function (a, b) { return Object(lodash_es__WEBPACK_IMPORTED_MODULE_0__["isEqual"])(Object(lodash_es__WEBPACK_IMPORTED_MODULE_0__["cloneDeep"])(a), b); });
-};
-
-
-/***/ }),
-
-/***/ "./src/lib/fn/getGameValue.ts":
-/*!************************************!*\
-  !*** ./src/lib/fn/getGameValue.ts ***!
-  \************************************/
-/*! exports provided: getGameValue */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getGameValue", function() { return getGameValue; });
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "rxjs");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(rxjs__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-
-
-
-function getGameValue(variable) {
-    return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["timer"])(0, 1000).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function () { return _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_2__["GM"].unsafeWindow[variable]; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["distinctUntilChanged"])());
-}
-
-
-/***/ }),
-
-/***/ "./src/lib/fn/insertAfter.ts":
-/*!***********************************!*\
-  !*** ./src/lib/fn/insertAfter.ts ***!
-  \***********************************/
-/*! exports provided: insertAfter */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insertAfter", function() { return insertAfter; });
-function insertAfter(newNode, referenceNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-}
-
-
-/***/ }),
-
-/***/ "./src/lib/fn/isLoggedIn.ts":
-/*!**********************************!*\
-  !*** ./src/lib/fn/isLoggedIn.ts ***!
-  \**********************************/
-/*! exports provided: isLoggedIn */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isLoggedIn", function() { return isLoggedIn; });
-function isLoggedIn() {
-    var gameWindow = document.getElementById('game-screen');
-    return !!gameWindow && getComputedStyle(gameWindow).display !== 'none';
-}
-
-
-/***/ }),
-
-/***/ "./src/lib/fn/mkElement.ts":
-/*!*********************************!*\
-  !*** ./src/lib/fn/mkElement.ts ***!
-  \*********************************/
-/*! exports provided: mkElement */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mkElement", function() { return mkElement; });
-function mkElement(name, text, asHTML) {
-    var el = document.createElement(name);
-    el[asHTML ? 'innerHTML' : 'innerText'] = text;
-    return el;
-}
-
-
-/***/ }),
-
-/***/ "./src/lib/fn/mkList.ts":
-/*!******************************!*\
-  !*** ./src/lib/fn/mkList.ts ***!
-  \******************************/
-/*! exports provided: createMkListFn */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createMkListFn", function() { return createMkListFn; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-/* harmony import */ var _interfaces_HideableUIItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../interfaces/HideableUIItem */ "./src/interfaces/HideableUIItem.ts");
-/* harmony import */ var _structures_IconMenuItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../structures/IconMenuItem */ "./src/lib/structures/IconMenuItem.ts");
-/* harmony import */ var _addCssClasses__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./addCssClasses */ "./src/lib/fn/addCssClasses.ts");
-/* harmony import */ var _addStyle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./addStyle */ "./src/lib/fn/addStyle.ts");
+// CONCATENATED MODULE: ./src/lib/fn/mkList.ts
 
 
 
@@ -871,14 +535,14 @@ function stdSeparatorFn() {
     return document.createElement('hr');
 }
 function isContainerElement(v) {
-    return !!v && v instanceof _structures_IconMenuItem__WEBPACK_IMPORTED_MODULE_3__["IconMenuItem"];
+    return !!v && v instanceof IconMenuItem_IconMenuItem;
 }
 function createMkListFn(container, separatorFn) {
     if (separatorFn === void 0) { separatorFn = stdSeparatorFn; }
     var numListItems = 0;
     var root = container.attachShadow({ mode: 'closed' });
-    Object(_addStyle__WEBPACK_IMPORTED_MODULE_5__["addStyle"])(root, _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_1__["GM"].getResourceText("bs_css" /* BS_CSS */));
-    Object(_addStyle__WEBPACK_IMPORTED_MODULE_5__["addStyle"])(root, __webpack_require__(/*! ../styles/main-menu.scss */ "./src/lib/styles/main-menu.scss"));
+    addStyle(root, GM.getResourceText("bs_css" /* BS_CSS */));
+    addStyle(root, __webpack_require__(5));
     function mkList() {
         var nodes = [];
         for (var _i = 0; _i < arguments.length; _i++) {
@@ -888,11 +552,11 @@ function createMkListFn(container, separatorFn) {
         if (numListItems++) {
             root.appendChild(separatorFn());
         }
-        var ul = Object(_addCssClasses__WEBPACK_IMPORTED_MODULE_4__["addCssClases"])('ul', 'inline');
+        var ul = addCssClases('ul', 'inline');
         var _loop_1 = function (node) {
             try {
                 var li_1 = document.createElement('li');
-                if (Object(_interfaces_HideableUIItem__WEBPACK_IMPORTED_MODULE_2__["isHideableUIItem"])(node)) {
+                if (isHideableUIItem(node)) {
                     node.shouldHideFromUI().subscribe(function (shouldHide) {
                         li_1.style.display = shouldHide ? 'none' : null;
                     });
@@ -912,7 +576,7 @@ function createMkListFn(container, separatorFn) {
             }
         };
         try {
-            for (var nodes_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__values"](nodes), nodes_1_1 = nodes_1.next(); !nodes_1_1.done; nodes_1_1 = nodes_1.next()) {
+            for (var nodes_1 = __values(nodes), nodes_1_1 = nodes_1.next(); !nodes_1_1.done; nodes_1_1 = nodes_1.next()) {
                 var node = nodes_1_1.value;
                 _loop_1(node);
             }
@@ -930,347 +594,46 @@ function createMkListFn(container, separatorFn) {
     return mkList;
 }
 
-
-/***/ }),
-
-/***/ "./src/lib/fn/mkSpan.ts":
-/*!******************************!*\
-  !*** ./src/lib/fn/mkSpan.ts ***!
-  \******************************/
-/*! exports provided: mkSpan */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mkSpan", function() { return mkSpan; });
-/* harmony import */ var _mkElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mkElement */ "./src/lib/fn/mkElement.ts");
+// CONCATENATED MODULE: ./src/lib/fn/mkSpan.ts
 
 function mkSpan(text, asHTML) {
-    return Object(_mkElement__WEBPACK_IMPORTED_MODULE_0__["mkElement"])('span', text, asHTML);
+    return mkElement('span', text, asHTML);
 }
 
+// CONCATENATED MODULE: ./src/lib/fn/navigate.ts
 
-/***/ }),
-
-/***/ "./src/lib/fn/navigate.ts":
-/*!********************************!*\
-  !*** ./src/lib/fn/navigate.ts ***!
-  \********************************/
-/*! exports provided: navigate */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "navigate", function() { return navigate; });
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-
-function navigate(where) {
-    _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_0__["GM"].unsafeWindow.navigate(where);
+function navigate_navigate(where) {
+    GM.unsafeWindow.navigate(where);
 }
 
+// EXTERNAL MODULE: external "_"
+var external_ = __webpack_require__(1);
 
-/***/ }),
+// EXTERNAL MODULE: external ["rxjs","operators"]
+var external_rxjs_operators_ = __webpack_require__(0);
 
-/***/ "./src/lib/fn/times1k.ts":
-/*!*******************************!*\
-  !*** ./src/lib/fn/times1k.ts ***!
-  \*******************************/
-/*! exports provided: times1k */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+// EXTERNAL MODULE: external "rxjs"
+var external_rxjs_ = __webpack_require__(2);
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "times1k", function() { return times1k; });
-function times1k(v) {
-    return v * 1000;
+// CONCATENATED MODULE: ./src/lib/fn/getGameValue.ts
+
+
+
+function getGameValue(variable) {
+    return Object(external_rxjs_["timer"])(0, 1000).pipe(Object(external_rxjs_operators_["map"])(function () { return GM.unsafeWindow[variable]; }), Object(external_rxjs_operators_["distinctUntilChanged"])());
 }
 
-
-/***/ }),
-
-/***/ "./src/lib/items/bars.ts":
-/*!*******************************!*\
-  !*** ./src/lib/items/bars.ts ***!
-  \*******************************/
-/*! exports provided: barCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "barCounts", function() { return barCounts; });
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-
-var barCounts = [
-    'bronzeBars',
-    'ironBars',
-    'silverBars',
-    'goldBars',
-    'promethiumBars',
-    'titaniumBars'
-].map(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameClick);
-barCounts.push(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameNav('ironBucket', "crafting" /* CRAFTING */), _structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromName('lava'));
+// CONCATENATED MODULE: ./src/lib/fn/distinctUntilObjectChanged.ts
 
 
-/***/ }),
-
-/***/ "./src/lib/items/bonez.ts":
-/*!********************************!*\
-  !*** ./src/lib/items/bonez.ts ***!
-  \********************************/
-/*! exports provided: boneCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "boneCounts", function() { return boneCounts; });
-/* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-
-
-var boneCounts = [
-    'fishBones',
-    'bones',
-    'ashes',
-    'iceBones'
-].map(function (n) { return _structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromNameClick(n); });
-boneCounts.unshift(new _structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"]('bonemealBin.png', Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_0__["getGameValue"])('bonemeal')));
-
-
-/***/ }),
-
-/***/ "./src/lib/items/cookedFood.ts":
-/*!*************************************!*\
-  !*** ./src/lib/items/cookedFood.ts ***!
-  \*************************************/
-/*! exports provided: cookedFoodCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cookedFoodCounts", function() { return cookedFoodCounts; });
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-
-var cookedFoodCounts = [
-    'chicken',
-    'cheese',
-    'honey',
-    'potato',
-    'apple',
-    'caveCarrot',
-    'shrimp',
-    'sardine',
-    'tuna',
-    'shark',
-    'shrimp2',
-    'sardine2',
-    'tuna2',
-    'swordfish2',
-    'shark2',
-    'swordfish',
-    'whale',
-    'whale2',
-    'rainbowFish',
-    'rainbowFish2'
-].map(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameClick);
-cookedFoodCounts.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameNav('energy', "exploring" /* EXPLORATION */));
-
-
-/***/ }),
-
-/***/ "./src/lib/items/exploringGoodies.ts":
-/*!*******************************************!*\
-  !*** ./src/lib/items/exploringGoodies.ts ***!
-  \*******************************************/
-/*! exports provided: exploringGoodies */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exploringGoodies", function() { return exploringGoodies; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es */ "lodash-es");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _consts_areas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../consts/areas */ "./src/consts/areas.ts");
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-
-
-
-
-var artifacts = [
-    'brokenSwordArtifact',
-    'cannonBallsArtifact',
-    'oldCannonArtifact',
-    'strangeLeafArtifact',
-    'ancientLogArtifact',
-    'rainbowFlowerArtifact',
-    'clayVaseArtifact',
-    'batWingArtifact',
-    'skullArtifact',
-    'sulferArtifact',
-    'volcanicRockArtifact',
-    'volcanicSmokeArtifact',
-    'iceArtifact',
-    'snowballsArtifact',
-    'frozenHeadArtifact',
-    'spiderLegsArtifact',
-    'broomArtifact',
-    'hauntedSkullArtifact'
-];
-var lootBags = _consts_areas__WEBPACK_IMPORTED_MODULE_2__["areas"].map(function (a) { return a + "Loot"; });
-lootBags.push.apply(lootBags, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](lootBags.map(function (t) { return "shiny" + Object(lodash_es__WEBPACK_IMPORTED_MODULE_1__["upperFirst"])(t); })));
-var statues = [
-    'bronze',
-    'iron',
-    'silver',
-    'gold',
-    'promethium',
-    'titanium'
-].reduce(function (acc, type) {
-    for (var i = 1; i <= 4; i++) {
-        var name_1 = type + "StatueMetalDetector";
-        if (i !== 1) {
-            name_1 += i.toString();
-        }
-        acc.push(name_1);
-    }
-    return acc;
-}, []);
-var exploringGoodies = artifacts
-    .concat(lootBags)
-    .concat(statues)
-    .map(_structures_Item__WEBPACK_IMPORTED_MODULE_3__["Item"].fromNameClick);
-
-
-/***/ }),
-
-/***/ "./src/lib/items/herbs.ts":
-/*!********************************!*\
-  !*** ./src/lib/items/herbs.ts ***!
-  \********************************/
-/*! exports provided: herbCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "herbCounts", function() { return herbCounts; });
-/* harmony import */ var _fn_navigate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../fn/navigate */ "./src/lib/fn/navigate.ts");
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-
-
-function navToBrew() {
-    Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_0__["navigate"])("brew" /* BREW */);
+function distinctUntilObjectChanged() {
+    return Object(external_rxjs_operators_["distinctUntilChanged"])(external_["isEqual"]);
 }
-function navToBrewing(e) {
-    e.preventDefault();
-    Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_0__["navigate"])("brewing" /* BREWING */);
-}
-var herbCounts = [
-    'dottedGreenLeaf',
-    'greenLeaf',
-    'limeLeaf',
-    'goldLeaf',
-    'crystalLeaf',
-    'redMushroom'
-].map(function (h) { return _structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromName(h).addOnClick(navToBrew).addOnRightClick(navToBrewing); });
+distinctUntilObjectChanged.cloned = function () {
+    return Object(external_rxjs_operators_["distinctUntilChanged"])(function (a, b) { return Object(external_["isEqual"])(Object(external_["cloneDeep"])(a), b); });
+};
 
-
-/***/ }),
-
-/***/ "./src/lib/items/logs.ts":
-/*!*******************************!*\
-  !*** ./src/lib/items/logs.ts ***!
-  \*******************************/
-/*! exports provided: logCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logCounts", function() { return logCounts; });
-/* harmony import */ var _fn_clickDOM__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../fn/clickDOM */ "./src/lib/fn/clickDOM.ts");
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-
-
-var logCounts = [
-    'logs',
-    'oakLogs',
-    'entLogs',
-    'willowLogs',
-    'mapleLogs',
-    'redwoodLogs',
-    'pineLogs',
-    'kindle',
-    'lavaKindle',
-    'hauntedLogs'
-].map(function (t) { return _structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromName(t).addOnClick(function () {
-    Object(_fn_clickDOM__WEBPACK_IMPORTED_MODULE_0__["domClickSelector"])("#dialogue-oven-" + t + ">tbody>tr[onclick]");
-}); });
-
-
-/***/ }),
-
-/***/ "./src/lib/items/ores.ts":
-/*!*******************************!*\
-  !*** ./src/lib/items/ores.ts ***!
-  \*******************************/
-/*! exports provided: oreCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "oreCounts", function() { return oreCounts; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es */ "lodash-es");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-/* harmony import */ var _util_Oilincome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util/Oilincome */ "./src/lib/items/util/Oilincome.ts");
-
-
-
-
-var oreCounts = [
-    _structures_Item__WEBPACK_IMPORTED_MODULE_2__["Item"].fromName('bloodCrystals').nav("shop" /* SHOP */),
-    _util_Oilincome__WEBPACK_IMPORTED_MODULE_3__["oilIncomeDisplay"],
-    _structures_Item__WEBPACK_IMPORTED_MODULE_2__["Item"].fromName('oil').nav("miningOres" /* MINING_MACHINERY */)
-];
-oreCounts.push.apply(oreCounts, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"]([
-    'sapphire',
-    'emerald',
-    'ruby',
-    'diamond',
-    'bloodDiamond',
-    'stone',
-    'copper',
-    'iron',
-    'silver',
-    'gold',
-    'promethium',
-    'titanium'
-], Object(lodash_es__WEBPACK_IMPORTED_MODULE_1__["range"])(1, 4).map(function (i) { return "geode" + i; })).map(function (n) { return _structures_Item__WEBPACK_IMPORTED_MODULE_2__["Item"].fromNameClick(n); })));
-
-
-/***/ }),
-
-/***/ "./src/lib/items/potions.ts":
-/*!**********************************!*\
-  !*** ./src/lib/items/potions.ts ***!
-  \**********************************/
-/*! exports provided: potionCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "potionCounts", function() { return potionCounts; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "moment");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "rxjs");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _consts_potions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../consts/potions */ "./src/consts/potions.ts");
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-/* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
+// CONCATENATED MODULE: ./src/lib/structures/ValuedMenuItem.ts
 
 
 
@@ -1279,320 +642,85 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var potionCounts = _consts_potions__WEBPACK_IMPORTED_MODULE_4__["NON_COMBAT_POTIONS"].map(function (i) {
-    var item = _structures_Item__WEBPACK_IMPORTED_MODULE_7__["Item"].fromName(i)
-        .addOnClick(function () {
-        _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_5__["GM"].unsafeWindow.clicksItem(i);
-    });
-    Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_6__["getGameValue"])(i)
-        .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (count) { return _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_5__["GM"].unsafeWindow.getPotionTimer(i) * 1000 * count; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (t) { return Object(moment__WEBPACK_IMPORTED_MODULE_1__["duration"])(t).humanize(); }))
-        .subscribe(function (txt) {
-        item.addSecondaryTooltip("Enough for " + txt);
-    });
-    return item;
-});
-potionCounts.push.apply(potionCounts, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_consts_potions__WEBPACK_IMPORTED_MODULE_4__["COMBAT_POTIONS"].map(function (potionName) {
-    var item = _structures_Item__WEBPACK_IMPORTED_MODULE_7__["Item"].fromName(potionName).forceState('btn-light');
-    var mobName$ = Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_6__["getGameValue"])('monsterName');
-    var potUsed$ = Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_6__["getGameValue"])(potionName + "Used");
-    Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["combineLatest"])(mobName$, potUsed$)
-        .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_a) {
-        var _b = tslib__WEBPACK_IMPORTED_MODULE_0__["__read"](_a, 2), mob = _b[0], used = _b[1];
-        return !mob || mob === 'none' || !!used;
-    }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["distinctUntilChanged"])())
-        .subscribe(function (shouldDisable) {
-        item.innerContainer.classList[shouldDisable ? 'add' : 'remove']('disabled');
-    });
-    return item;
-})));
 
 
-/***/ }),
-
-/***/ "./src/lib/items/rares.ts":
-/*!********************************!*\
-  !*** ./src/lib/items/rares.ts ***!
-  \********************************/
-/*! exports provided: rareCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rareCounts", function() { return rareCounts; });
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-
-var rareCounts = [
-    'treasureChest',
-    'treasureMap',
-    'xpLamp10k',
-    'bagOfCash',
-    'hauntedPainting',
-    'hpEmblem1',
-    'hpEmblem1Uncharged',
-    'hpEmblem2',
-    'hpEmblem2Uncharged'
-].map(function (n) { return _structures_Item__WEBPACK_IMPORTED_MODULE_0__["Item"].fromNameClick(n).forceState('btn-success'); });
-
-
-/***/ }),
-
-/***/ "./src/lib/items/rawFood.ts":
-/*!**********************************!*\
-  !*** ./src/lib/items/rawFood.ts ***!
-  \**********************************/
-/*! exports provided: rawFoodCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rawFoodCounts", function() { return rawFoodCounts; });
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-
-
-var rawFoodCounts = [
-    'rawRainbowFish',
-    'rawWhale',
-    'rawShark',
-    'rawSwordfish',
-    'rawTuna',
-    'rawChicken',
-    'rawSardine',
-    'rawShrimp'
-].map(_structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromNameClick);
-rawFoodCounts.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromName('heat').addOnClick(function () {
-    _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_0__["GM"].unsafeWindow.clicksItem(_interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_0__["GM"].unsafeWindow.getOvenType());
-}));
-rawFoodCounts.unshift(_structures_Item__WEBPACK_IMPORTED_MODULE_1__["Item"].fromNameNav('bait', "cooking" /* COOKING */));
-
-
-/***/ }),
-
-/***/ "./src/lib/items/seeds.ts":
-/*!********************************!*\
-  !*** ./src/lib/items/seeds.ts ***!
-  \********************************/
-/*! exports provided: seedCounts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "seedCounts", function() { return seedCounts; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _consts_seeds__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../consts/seeds */ "./src/consts/seeds.ts");
-/* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
-/* harmony import */ var _SeedTimer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../SeedTimer */ "./src/lib/SeedTimer.ts");
-/* harmony import */ var _structures_Item__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../structures/Item */ "./src/lib/structures/Item.ts");
-
-
-
-
-
-var seedCounts = _consts_seeds__WEBPACK_IMPORTED_MODULE_1__["seedNames"]
-    .map(function (n) { return _structures_Item__WEBPACK_IMPORTED_MODULE_4__["Item"].fromNameNav(n, "farming" /* FARMING */); });
-seedCounts.push(_SeedTimer__WEBPACK_IMPORTED_MODULE_3__["seedTimer"]);
-seedCounts.unshift.apply(seedCounts, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"]([
-    'fishBones',
-    'bones',
-    'ashes',
-    'iceBones'
-].map(function (n) { return _structures_Item__WEBPACK_IMPORTED_MODULE_4__["Item"].fromNameClick(n); })));
-seedCounts.unshift(new _structures_Item__WEBPACK_IMPORTED_MODULE_4__["Item"]('bonemealBin.png', Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_2__["getGameValue"])('bonemeal')));
-
-
-/***/ }),
-
-/***/ "./src/lib/items/util/Oilincome.ts":
-/*!*****************************************!*\
-  !*** ./src/lib/items/util/Oilincome.ts ***!
-  \*****************************************/
-/*! exports provided: oilIncomeDisplay */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "oilIncomeDisplay", function() { return oilIncomeDisplay; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "rxjs");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-/* harmony import */ var _fn_addStyle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../fn/addStyle */ "./src/lib/fn/addStyle.ts");
-/* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
-/* harmony import */ var _fn_navigate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../fn/navigate */ "./src/lib/fn/navigate.ts");
-/* harmony import */ var _structures_ValuedMenuItem__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../structures/ValuedMenuItem */ "./src/lib/structures/ValuedMenuItem.ts");
-
-
-
-
-
-
-
-
-var OilIncomeDisplay = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](OilIncomeDisplay, _super);
-    function OilIncomeDisplay() {
-        var _this = _super.call(this, '/images/oil_lighter.png') || this;
-        Object(_fn_addStyle__WEBPACK_IMPORTED_MODULE_4__["addStyle"])(_this.root, _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_3__["GM"].getResourceText("bs_css" /* BS_CSS */));
+var _value = Symbol('value');
+var ValuedMenuItem_ValuedMenuItem = /** @class */ (function (_super) {
+    __extends(ValuedMenuItem, _super);
+    function ValuedMenuItem(imgUrl, label) {
+        var _this = _super.call(this, imgUrl, label) || this;
+        _this.innerContainer.appendChild(_this.valueElement);
+        addStyle(_this.root, GM.getResourceText("bs_css" /* BS_CSS */));
+        _this.initTextObservable()
+            .subscribe(function (value) {
+            _this.valueElement.innerHTML = value;
+        });
+        setTimeout(function () {
+            var initialValue = _this.computeValue();
+            if (Object(external_rxjs_["isObservable"])(initialValue)) {
+                initialValue
+                    .pipe(distinctUntilObjectChanged())
+                    .subscribe(function (v) {
+                    _this.value = v;
+                });
+            }
+            else {
+                Object(external_rxjs_["timer"])(0, 1000)
+                    .pipe(Object(external_rxjs_operators_["map"])(function () { return _this.computeValue(); }), distinctUntilObjectChanged())
+                    .subscribe(function () {
+                    _this.value = _this.computeValue();
+                });
+            }
+        }, 1);
         return _this;
     }
-    OilIncomeDisplay.prototype.computeValue = function () {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["combineLatest"])(Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_5__["getGameValue"])('oilIn'), Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_5__["getGameValue"])('oilOut')).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (_a) {
-            var _b = tslib__WEBPACK_IMPORTED_MODULE_0__["__read"](_a, 2), $in = _b[0], $out = _b[1];
-            return $in - $out;
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["distinctUntilChanged"])());
-    };
-    OilIncomeDisplay.prototype.getOnClick = function () {
-        return function () {
-            Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_6__["navigate"])("miningOres" /* MINING_MACHINERY */);
-        };
-    };
-    OilIncomeDisplay.prototype.valueStringifier = function (value) {
-        var label = value ? 'success' : 'danger';
-        var sym = value ? '+' : '-';
-        return "<span class=\"text-" + label + "\">" + (sym + (value || 0).toLocaleString()) + "</span>";
-    };
-    return OilIncomeDisplay;
-}(_structures_ValuedMenuItem__WEBPACK_IMPORTED_MODULE_7__["ValuedMenuItem"]));
-var oilIncomeDisplay = new OilIncomeDisplay();
-
-
-/***/ }),
-
-/***/ "./src/lib/structures/IconMenuItem.ts":
-/*!********************************************!*\
-  !*** ./src/lib/structures/IconMenuItem.ts ***!
-  \********************************************/
-/*! exports provided: IconMenuItem */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IconMenuItem", function() { return IconMenuItem; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! typescript-lazy-get-decorator */ "./node_modules/typescript-lazy-get-decorator/esm5/LazyGetter.js");
-/* harmony import */ var _fn_addCssClasses__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../fn/addCssClasses */ "./src/lib/fn/addCssClasses.ts");
-/* harmony import */ var _fn_addStyle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../fn/addStyle */ "./src/lib/fn/addStyle.ts");
-
-
-
-
-var IconMenuItem = /** @class */ (function () {
-    function IconMenuItem(imgUrl, label) {
-        this.imgUrl = imgUrl;
-        this.label = label || '';
-        var onClick = this.getOnClick();
-        if (onClick) {
-            this.root.addEventListener('click', onClick);
-        }
-        Object(_fn_addStyle__WEBPACK_IMPORTED_MODULE_3__["addStyle"])(this.root, __webpack_require__(/*! ../styles/IconMenuItemBase.scss */ "./src/lib/styles/IconMenuItemBase.scss"));
-        this.root.appendChild(this.innerContainer);
-        this.innerContainer.appendChild(this.img);
-        this.innerContainer.appendChild(this.labelElement);
-    }
-    Object.defineProperty(IconMenuItem.prototype, "container", {
+    Object.defineProperty(ValuedMenuItem.prototype, "value", {
         get: function () {
-            return document.createElement('div');
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(IconMenuItem.prototype, "img", {
-        get: function () {
-            return Object(_fn_addCssClasses__WEBPACK_IMPORTED_MODULE_2__["addCssClases"])('img', 'item');
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(IconMenuItem.prototype, "imgUrl", {
-        get: function () {
-            return this.img.src;
+            return this[_value].value;
         },
         set: function (v) {
-            this.img.src = v;
+            this[_value].next(v);
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(IconMenuItem.prototype, "innerContainer", {
+    Object.defineProperty(ValuedMenuItem.prototype, "valueElement", {
         get: function () {
-            return Object(_fn_addCssClasses__WEBPACK_IMPORTED_MODULE_2__["addCssClases"])('span', 'btn', 'btn-sm', 'btn-dark');
+            return addCssClases(mkSpan('??'), 'item');
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(IconMenuItem.prototype, "label", {
+    Object.defineProperty(ValuedMenuItem.prototype, _a = _value, {
         get: function () {
-            return this.labelElement.innerHTML;
-        },
-        set: function (v) {
-            this.labelElement.innerHTML = v;
+            return new external_rxjs_["BehaviorSubject"](null);
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(IconMenuItem.prototype, "labelElement", {
-        get: function () {
-            return Object(_fn_addCssClasses__WEBPACK_IMPORTED_MODULE_2__["addCssClases"])('span', 'item');
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(IconMenuItem.prototype, "root", {
-        get: function () {
-            return this.container.attachShadow({ mode: 'closed' });
-        },
-        enumerable: true,
-        configurable: true
-    });
-    IconMenuItem.prototype.getOnClick = function () {
-        // none
+    ValuedMenuItem.prototype.getValueObservable = function () {
+        return this[_value].pipe(Object(external_rxjs_operators_["distinctUntilChanged"])(), Object(external_rxjs_operators_["shareReplay"])());
     };
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_1__["LazyGetter"])()
-    ], IconMenuItem.prototype, "container", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_1__["LazyGetter"])()
-    ], IconMenuItem.prototype, "img", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_1__["LazyGetter"])()
-    ], IconMenuItem.prototype, "innerContainer", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_1__["LazyGetter"])()
-    ], IconMenuItem.prototype, "labelElement", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_1__["LazyGetter"])()
-    ], IconMenuItem.prototype, "root", null);
-    return IconMenuItem;
-}());
+    ValuedMenuItem.prototype.initTextObservable = function () {
+        return this.getValueObservable()
+            .pipe(Object(external_rxjs_operators_["map"])(this.valueStringifier, this), Object(external_rxjs_operators_["startWith"])('??'), Object(external_rxjs_operators_["distinctUntilChanged"])());
+    };
+    ValuedMenuItem.prototype.valueStringifier = function (value) {
+        //tslint:disable-next-line:triple-equals
+        return value == null ? '??' : value.toLocaleString();
+    };
+    var _a;
+    __decorate([
+        LazyGetter()
+    ], ValuedMenuItem.prototype, "valueElement", null);
+    __decorate([
+        LazyGetter()
+    ], ValuedMenuItem.prototype, _a, null);
+    return ValuedMenuItem;
+}(IconMenuItem_IconMenuItem));
 
 
-
-/***/ }),
-
-/***/ "./src/lib/structures/Item.ts":
-/*!************************************!*\
-  !*** ./src/lib/structures/Item.ts ***!
-  \************************************/
-/*! exports provided: Item */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Item", function() { return Item; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es */ "lodash-es");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! typescript-lazy-get-decorator */ "./node_modules/typescript-lazy-get-decorator/esm5/LazyGetter.js");
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-/* harmony import */ var _fn_addStyle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../fn/addStyle */ "./src/lib/fn/addStyle.ts");
-/* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
-/* harmony import */ var _fn_mkElement__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../fn/mkElement */ "./src/lib/fn/mkElement.ts");
-/* harmony import */ var _fn_navigate__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../fn/navigate */ "./src/lib/fn/navigate.ts");
-/* harmony import */ var _ValuedMenuItem__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ValuedMenuItem */ "./src/lib/structures/ValuedMenuItem.ts");
+// CONCATENATED MODULE: ./src/lib/structures/Item.ts
 
 
 
@@ -1604,8 +732,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var replace = /\.(png|gif)$/g;
-var Item = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](Item, _super);
+var Item_Item = /** @class */ (function (_super) {
+    __extends(Item, _super);
     function Item(asset, valueOb$) {
         var _this = _super.call(this, "/images/" + asset, '') || this;
         _this.valueOb$ = valueOb$;
@@ -1623,24 +751,24 @@ var Item = /** @class */ (function (_super) {
                 }
             }
         });
-        Object(_fn_addStyle__WEBPACK_IMPORTED_MODULE_5__["addStyle"])(_this.root, _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_4__["GM"].getResourceText("tooltip_css" /* TOOLTIP_CSS */));
+        addStyle(_this.root, GM.getResourceText("tooltip_css" /* TOOLTIP_CSS */));
         _this.innerContainer.setAttribute('data-balloon-pos', 'up');
-        _this.innerContainer.setAttribute('data-balloon', Object(lodash_es__WEBPACK_IMPORTED_MODULE_1__["startCase"])(asset.toString().replace(replace, '')));
+        _this.innerContainer.setAttribute('data-balloon', Object(external_["startCase"])(asset.toString().replace(replace, '')));
         return _this;
     }
     Object.defineProperty(Item.prototype, "hideStyleEl", {
         get: function () {
-            return Object(_fn_mkElement__WEBPACK_IMPORTED_MODULE_7__["mkElement"])('style', ':host{display:none!important}');
+            return mkElement('style', ':host{display:none!important}');
         },
         enumerable: true,
         configurable: true
     });
     Item.fromName = function (name) {
-        return new Item(name + ".png", Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_6__["getGameValue"])(name));
+        return new Item(name + ".png", getGameValue(name));
     };
     Item.fromNameClick = function (name) {
         return Item.fromName(name).addOnClick(function () {
-            _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_4__["GM"].unsafeWindow.clicksItem(name);
+            GM.unsafeWindow.clicksItem(name);
         });
     };
     Item.fromNameNav = function (name, navTarget) {
@@ -1682,61 +810,611 @@ var Item = /** @class */ (function (_super) {
     };
     Item.prototype.nav = function (where) {
         return this.addOnClick(function () {
-            Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_8__["navigate"])(where);
+            navigate_navigate(where);
         });
     };
     Item.prototype.shouldHideFromUI = function () {
-        return this.valueOb$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(shouldHideFromUIMapper), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["distinctUntilChanged"])());
+        return this.valueOb$.pipe(Object(external_rxjs_operators_["map"])(shouldHideFromUIMapper), Object(external_rxjs_operators_["distinctUntilChanged"])());
     };
     Item.prototype.computeValue = function () {
         return this.valueOb$;
     };
     Item.prototype.addPointer = function () {
-        Object(_fn_addStyle__WEBPACK_IMPORTED_MODULE_5__["addStyle"])(this.root, ':host{cursor:pointer}');
-        this.addPointer = lodash_es__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        addStyle(this.root, ':host{cursor:pointer}');
+        this.addPointer = external_["noop"];
     };
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_3__["LazyGetter"])()
+    __decorate([
+        LazyGetter()
     ], Item.prototype, "hideStyleEl", null);
     return Item;
-}(_ValuedMenuItem__WEBPACK_IMPORTED_MODULE_9__["ValuedMenuItem"]));
+}(ValuedMenuItem_ValuedMenuItem));
 
 function shouldHideFromUIMapper(num) {
     return num <= 0;
 }
 
+// CONCATENATED MODULE: ./src/lib/items/bars.ts
 
-/***/ }),
+var barCounts = [
+    'bronzeBars',
+    'ironBars',
+    'silverBars',
+    'goldBars',
+    'promethiumBars',
+    'titaniumBars'
+].map(Item_Item.fromNameClick);
+barCounts.push(Item_Item.fromNameNav('ironBucket', "crafting" /* CRAFTING */), Item_Item.fromName('lava'));
 
-/***/ "./src/lib/structures/PatchTimer.ts":
-/*!******************************************!*\
-  !*** ./src/lib/structures/PatchTimer.ts ***!
-  \******************************************/
-/*! exports provided: PatchTimer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PatchTimer", function() { return PatchTimer; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es */ "lodash-es");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "rxjs");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _fn_distinctUntilObjectChanged__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../fn/distinctUntilObjectChanged */ "./src/lib/fn/distinctUntilObjectChanged.ts");
-/* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
-/* harmony import */ var _TimerMenuItem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./TimerMenuItem */ "./src/lib/structures/TimerMenuItem.ts");
+// CONCATENATED MODULE: ./src/lib/items/bones.ts
 
 
+var boneCounts = [
+    'fishBones',
+    'bones',
+    'ashes',
+    'iceBones'
+].map(function (n) { return Item_Item.fromNameClick(n); });
+boneCounts.unshift(new Item_Item('bonemealBin.png', getGameValue('bonemeal')));
+
+// CONCATENATED MODULE: ./src/lib/items/cookedFood.ts
+
+var cookedFoodCounts = [
+    'chicken',
+    'cheese',
+    'honey',
+    'potato',
+    'apple',
+    'caveCarrot',
+    'shrimp',
+    'sardine',
+    'tuna',
+    'shark',
+    'shrimp2',
+    'sardine2',
+    'tuna2',
+    'swordfish2',
+    'shark2',
+    'swordfish',
+    'whale',
+    'whale2',
+    'rainbowFish',
+    'rainbowFish2'
+].map(Item_Item.fromNameClick);
+cookedFoodCounts.unshift(Item_Item.fromNameNav('energy', "exploring" /* EXPLORATION */));
+
+// CONCATENATED MODULE: ./src/consts/areas.ts
+var areas = [
+    'fields',
+    'forests',
+    'caves',
+    'volcano',
+    'northernFields',
+    'hauntedMansion',
+    'desert'
+];
+
+// CONCATENATED MODULE: ./src/lib/items/exploringGoodies.ts
+
+
+
+
+var artifacts = [
+    'brokenSwordArtifact',
+    'cannonBallsArtifact',
+    'oldCannonArtifact',
+    'strangeLeafArtifact',
+    'ancientLogArtifact',
+    'rainbowFlowerArtifact',
+    'clayVaseArtifact',
+    'batWingArtifact',
+    'skullArtifact',
+    'sulferArtifact',
+    'volcanicRockArtifact',
+    'volcanicSmokeArtifact',
+    'iceArtifact',
+    'snowballsArtifact',
+    'frozenHeadArtifact',
+    'spiderLegsArtifact',
+    'broomArtifact',
+    'hauntedSkullArtifact'
+];
+var lootBags = areas.map(function (a) { return a + "Loot"; });
+lootBags.push.apply(lootBags, __spread(lootBags.map(function (t) { return "shiny" + Object(external_["upperFirst"])(t); })));
+var statues = [
+    'bronze',
+    'iron',
+    'silver',
+    'gold',
+    'promethium',
+    'titanium'
+].reduce(function (acc, type) {
+    for (var i = 1; i <= 4; i++) {
+        var name_1 = type + "StatueMetalDetector";
+        if (i !== 1) {
+            name_1 += i.toString();
+        }
+        acc.push(name_1);
+    }
+    return acc;
+}, []);
+var exploringGoodies = artifacts
+    .concat(lootBags)
+    .concat(statues)
+    .map(Item_Item.fromNameClick);
+
+// CONCATENATED MODULE: ./src/lib/items/herbs.ts
+
+
+function navToBrew() {
+    navigate_navigate("brew" /* BREW */);
+}
+function navToBrewing(e) {
+    e.preventDefault();
+    navigate_navigate("brewing" /* BREWING */);
+}
+var herbCounts = [
+    'dottedGreenLeaf',
+    'greenLeaf',
+    'limeLeaf',
+    'goldLeaf',
+    'crystalLeaf',
+    'redMushroom'
+].map(function (h) { return Item_Item.fromName(h).addOnClick(navToBrew).addOnRightClick(navToBrewing); });
+
+// CONCATENATED MODULE: ./src/lib/fn/clickDOM.ts
+function clickCommon(el) {
+    if (el) {
+        el.click();
+        return true;
+    }
+    return false;
+}
+function domClickID(id) {
+    if (!clickCommon(document.getElementById(id))) {
+        throw new Error("Unable to click DOM ID " + id);
+    }
+}
+function domClickSelector(selector) {
+    if (!clickCommon(document.querySelector(selector))) {
+        throw new Error("Unable to click selector \"" + selector + "\"");
+    }
+}
+
+// CONCATENATED MODULE: ./src/lib/items/logs.ts
+
+
+var logCounts = [
+    'logs',
+    'oakLogs',
+    'entLogs',
+    'willowLogs',
+    'mapleLogs',
+    'redwoodLogs',
+    'pineLogs',
+    'kindle',
+    'lavaKindle',
+    'hauntedLogs'
+].map(function (t) { return Item_Item.fromName(t).addOnClick(function () {
+    domClickSelector("#dialogue-oven-" + t + ">tbody>tr[onclick]");
+}); });
+
+// CONCATENATED MODULE: ./src/lib/items/util/Oilincome.ts
 
 
 
 
 
-var PatchTimer = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](PatchTimer, _super);
+
+
+
+var Oilincome_OilIncomeDisplay = /** @class */ (function (_super) {
+    __extends(OilIncomeDisplay, _super);
+    function OilIncomeDisplay() {
+        var _this = _super.call(this, '/images/oil_lighter.png') || this;
+        addStyle(_this.root, GM.getResourceText("bs_css" /* BS_CSS */));
+        return _this;
+    }
+    OilIncomeDisplay.prototype.computeValue = function () {
+        return Object(external_rxjs_["combineLatest"])(getGameValue('oilIn'), getGameValue('oilOut')).pipe(Object(external_rxjs_operators_["map"])(function (_a) {
+            var _b = __read(_a, 2), $in = _b[0], $out = _b[1];
+            return $in - $out;
+        }), Object(external_rxjs_operators_["distinctUntilChanged"])());
+    };
+    OilIncomeDisplay.prototype.getOnClick = function () {
+        return function () {
+            navigate_navigate("miningOres" /* MINING_MACHINERY */);
+        };
+    };
+    OilIncomeDisplay.prototype.valueStringifier = function (value) {
+        var label = value ? 'success' : 'danger';
+        var sym = value ? '+' : '-';
+        return "<span class=\"text-" + label + "\">" + (sym + (value || 0).toLocaleString()) + "</span>";
+    };
+    return OilIncomeDisplay;
+}(ValuedMenuItem_ValuedMenuItem));
+var oilIncomeDisplay = new Oilincome_OilIncomeDisplay();
+
+// CONCATENATED MODULE: ./src/lib/items/ores.ts
+
+
+
+
+var oreCounts = [
+    Item_Item.fromName('bloodCrystals').nav("shop" /* SHOP */),
+    oilIncomeDisplay,
+    Item_Item.fromName('oil').nav("miningOres" /* MINING_MACHINERY */)
+];
+oreCounts.push.apply(oreCounts, __spread(__spread([
+    'sapphire',
+    'emerald',
+    'ruby',
+    'diamond',
+    'bloodDiamond',
+    'stone',
+    'copper',
+    'iron',
+    'silver',
+    'gold',
+    'promethium',
+    'titanium'
+], Object(external_["range"])(1, 4).map(function (i) { return "geode" + i; })).map(function (n) { return Item_Item.fromNameClick(n); })));
+
+// EXTERNAL MODULE: external "moment"
+var external_moment_ = __webpack_require__(3);
+
+// CONCATENATED MODULE: ./src/consts/potions.ts
+var INSTANT_POTIONS = [
+    'superCompostPotion',
+    'woodcuttingUpgradePotion'
+];
+var DURATION_POTIONS = [
+    'furnaceSpeedPotion',
+    'treeCompostPotion',
+    'woodcuttingXpPotion',
+    'seedFinderPotion',
+    'compostPotion',
+    'fastCompostPotion',
+    'farmingXpPotion',
+    'fishingSpeedPotion',
+    'baitPotion',
+    'exploringSpeedPotion',
+    'oilPotion',
+    'coinPotion'
+];
+var COMBAT_POTIONS = [
+    'hpCombatPotion',
+    'freezeCombatPotion'
+];
+var NON_COMBAT_POTIONS = INSTANT_POTIONS.concat(DURATION_POTIONS);
+
+// CONCATENATED MODULE: ./src/lib/items/potions.ts
+
+
+
+
+
+
+
+
+var potionCounts = NON_COMBAT_POTIONS.map(function (i) {
+    var item = Item_Item.fromName(i)
+        .addOnClick(function () {
+        GM.unsafeWindow.clicksItem(i);
+    });
+    getGameValue(i)
+        .pipe(Object(external_rxjs_operators_["map"])(function (count) { return GM.unsafeWindow.getPotionTimer(i) * 1000 * count; }), Object(external_rxjs_operators_["distinctUntilChanged"])(), Object(external_rxjs_operators_["map"])(function (t) { return Object(external_moment_["duration"])(t).humanize(); }))
+        .subscribe(function (txt) {
+        item.addSecondaryTooltip("Enough for " + txt);
+    });
+    return item;
+});
+potionCounts.push.apply(potionCounts, __spread(COMBAT_POTIONS.map(function (potionName) {
+    var item = Item_Item.fromName(potionName).forceState('btn-light');
+    var mobName$ = getGameValue('monsterName');
+    var potUsed$ = getGameValue(potionName + "Used");
+    Object(external_rxjs_["combineLatest"])(mobName$, potUsed$)
+        .pipe(Object(external_rxjs_operators_["map"])(function (_a) {
+        var _b = __read(_a, 2), mob = _b[0], used = _b[1];
+        return !mob || mob === 'none' || !!used;
+    }), Object(external_rxjs_operators_["distinctUntilChanged"])())
+        .subscribe(function (shouldDisable) {
+        item.innerContainer.classList[shouldDisable ? 'add' : 'remove']('disabled');
+    });
+    return item;
+})));
+
+// CONCATENATED MODULE: ./src/lib/items/rares.ts
+
+var rareCounts = [
+    'treasureChest',
+    'treasureMap',
+    'xpLamp10k',
+    'bagOfCash',
+    'hauntedPainting',
+    'hpEmblem1',
+    'hpEmblem1Uncharged',
+    'hpEmblem2',
+    'hpEmblem2Uncharged'
+].map(function (n) { return Item_Item.fromNameClick(n).forceState('btn-success'); });
+
+// CONCATENATED MODULE: ./src/lib/items/rawFood.ts
+
+
+var rawFoodCounts = [
+    'rawRainbowFish',
+    'rawWhale',
+    'rawShark',
+    'rawSwordfish',
+    'rawTuna',
+    'rawChicken',
+    'rawSardine',
+    'rawShrimp'
+].map(Item_Item.fromNameClick);
+rawFoodCounts.unshift(Item_Item.fromName('heat').addOnClick(function () {
+    GM.unsafeWindow.clicksItem(GM.unsafeWindow.getOvenType());
+}));
+rawFoodCounts.unshift(Item_Item.fromNameNav('bait', "cooking" /* COOKING */));
+
+// CONCATENATED MODULE: ./src/consts/seeds.ts
+
+var seedGrowTimes = {
+    appleTreeSeeds: 6 * 3600000,
+    crystalLeafSeeds: 3 * 3600000,
+    dottedGreenLeafSeeds: 15 * 60000,
+    goldLeafSeeds: 2 * 3600000,
+    greenLeafSeeds: 30 * 60000,
+    hauntedTreeSeeds: 12 * 3600000,
+    limeLeafSeeds: 3600000,
+    mapleTreeSeeds: 6 * 3600000,
+    oakTreeSeeds: 2 * 3600000,
+    pineTreeSeeds: 36000000,
+    redMushroomSeeds: 15 * 60000,
+    redwoodTreeSeeds: 8 * 3600000,
+    treeSeeds: 3600000,
+    willowTreeSeeds: 4 * 3600000
+};
+var seedNames = Object(external_["sortBy"])(Object.keys(seedGrowTimes), function (k) { return seedGrowTimes[k]; });
+
+// CONCATENATED MODULE: ./src/lib/structures/ReadiableMenuItem.ts
+
+
+
+var ReadiableMenuItem_ReadiableMenuItem = /** @class */ (function (_super) {
+    __extends(ReadiableMenuItem, _super);
+    function ReadiableMenuItem(imgUrl, label) {
+        var _this = _super.call(this, imgUrl, label) || this;
+        var classes = _this.innerContainer.classList;
+        _this.isReady().subscribe(function (ready) {
+            if (ready) {
+                classes.remove('btn-dark');
+                classes.add.apply(classes, __spread(_this.getReadyClasses()));
+            }
+            else {
+                classes.remove.apply(classes, __spread(_this.getReadyClasses()));
+                classes.add('btn-dark');
+            }
+        });
+        return _this;
+    }
+    ReadiableMenuItem.prototype.isReady = function () {
+        return this.getValueObservable().pipe(Object(external_rxjs_operators_["map"])(this.readyMapper, this), Object(external_rxjs_operators_["distinctUntilChanged"])());
+    };
+    ReadiableMenuItem.prototype.getReadyClasses = function () {
+        return ['btn-success'];
+    };
+    return ReadiableMenuItem;
+}(ValuedMenuItem_ValuedMenuItem));
+
+
+// CONCATENATED MODULE: ./src/lib/SeedTimer.ts
+
+
+
+
+
+
+
+
+
+
+
+function getDivider() {
+    var obs$ = Object(external_["range"])(1, 7).map(function (i) { return getGameValue("farmUnlocked" + i); });
+    return Object(external_rxjs_["combineLatest"])(obs$).pipe(Object(external_rxjs_operators_["map"])(function (unlockStates) {
+        var e_1, _a;
+        var out = 0;
+        try {
+            for (var unlockStates_1 = __values(unlockStates), unlockStates_1_1 = unlockStates_1.next(); !unlockStates_1_1.done; unlockStates_1_1 = unlockStates_1.next()) {
+                var us = unlockStates_1_1.value;
+                out += us;
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (unlockStates_1_1 && !unlockStates_1_1.done && (_a = unlockStates_1.return)) _a.call(unlockStates_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        return Math.max(1, out);
+    }), Object(external_rxjs_operators_["distinctUntilChanged"])());
+}
+var SeedTimer_SeedTimer = /** @class */ (function (_super) {
+    __extends(SeedTimer, _super);
+    function SeedTimer() {
+        var _this = _super.call(this, '/images/clock_white.png') || this;
+        addStyle(_this.root, GM.getResourceText("tooltip_css" /* TOOLTIP_CSS */));
+        _this.innerContainer.setAttribute('data-balloon-pos', 'up');
+        _this.computeValue().subscribe(function (v) {
+            var dur = Object(external_moment_["duration"])(v);
+            var out = [
+                dur.hours(),
+                dur.minutes(),
+                dur.seconds()
+            ];
+            if (dur.days()) {
+                out.unshift(dur.days());
+            }
+            var txt = out.map(function (num) { return Object(external_["padStart"])(num.toString(), 2, '0'); }).join(':');
+            _this.innerContainer.setAttribute('data-balloon', txt);
+        });
+        return _this;
+    }
+    SeedTimer.prototype.computeValue = function () {
+        return getDivider().pipe(Object(external_rxjs_operators_["switchMap"])(function (divider) {
+            return Object(external_rxjs_["combineLatest"])(seedNames.map(getGameValue)).pipe(Object(external_rxjs_operators_["map"])(function (counts) {
+                var out = 0;
+                for (var i = 0; i < counts.length; i++) {
+                    out += counts[i] * seedGrowTimes[seedNames[i]];
+                }
+                return Math.floor(out / divider);
+            }));
+        }), Object(external_rxjs_operators_["distinctUntilChanged"])());
+    };
+    SeedTimer.prototype.getOnClick = function () {
+        return function () {
+            navigate_navigate("farming" /* FARMING */);
+        };
+    };
+    SeedTimer.prototype.getReadyClasses = function () {
+        return ['btn-danger'];
+    };
+    SeedTimer.prototype.readyMapper = function (value) {
+        return value === 0;
+    };
+    SeedTimer.prototype.valueStringifier = function (value) {
+        return this.readyMapper(value) ? 'Done' : Object(external_moment_["duration"])(value).humanize();
+    };
+    return SeedTimer;
+}(ReadiableMenuItem_ReadiableMenuItem));
+var seedTimer = new SeedTimer_SeedTimer();
+
+// CONCATENATED MODULE: ./src/lib/items/seeds.ts
+
+
+
+
+
+var seedCounts = seedNames
+    .map(function (n) { return Item_Item.fromNameNav(n, "farming" /* FARMING */); });
+seedCounts.push(seedTimer);
+seedCounts.unshift.apply(seedCounts, __spread([
+    'fishBones',
+    'bones',
+    'ashes',
+    'iceBones'
+].map(function (n) { return Item_Item.fromNameClick(n); })));
+seedCounts.unshift(new Item_Item('bonemealBin.png', getGameValue('bonemeal')));
+
+// CONCATENATED MODULE: ./src/lib/timers/crafting.ts
+
+
+
+
+
+
+var crafting_CraftingTimer = /** @class */ (function (_super) {
+    __extends(CraftingTimer, _super);
+    function CraftingTimer() {
+        return _super.call(this, '/images/craftingSkill.png') || this;
+    }
+    CraftingTimer.prototype.computeValue = function () {
+        return Object(external_rxjs_["combineLatest"])(getGameValue('smeltingCurrentOreTo'), getGameValue('smeltingCurrentOreAt'))
+            .pipe(Object(external_rxjs_operators_["map"])(function (_a) {
+            var _b = __read(_a, 2), to = _b[0], at = _b[1];
+            return to - at;
+        }));
+    };
+    CraftingTimer.prototype.getOnClick = function () {
+        return function () {
+            navigate_navigate("crafting" /* CRAFTING */);
+        };
+    };
+    CraftingTimer.prototype.readyMapper = function (value) {
+        return value === 0;
+    };
+    CraftingTimer.prototype.valueStringifier = function (value) {
+        return value === -1 ? '??' : this.readyMapper(value) ? 'ready' : _super.prototype.valueStringifier.call(this, value);
+    };
+    return CraftingTimer;
+}(ReadiableMenuItem_ReadiableMenuItem));
+var craftingTimer = new crafting_CraftingTimer();
+
+// CONCATENATED MODULE: ./src/lib/fn/times1k.ts
+function times1k(v) {
+    return v * 1000;
+}
+
+// CONCATENATED MODULE: ./src/lib/structures/TimerMenuItem.ts
+
+
+
+
+var TimerMenuItem_TimerMenuItem = /** @class */ (function (_super) {
+    __extends(TimerMenuItem, _super);
+    function TimerMenuItem() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TimerMenuItem.format = function (v) {
+        return Object(external_["padStart"])(v.toString(), 2, '0');
+    };
+    TimerMenuItem.prototype.readyMapper = function (value) {
+        return value === 0;
+    };
+    TimerMenuItem.prototype.valueStringifier = function (millis) {
+        switch (millis) {
+            case 0:
+                return 'ready';
+            case -1:
+                return '??';
+            default:
+                var m = Object(external_moment_["duration"])(millis);
+                var oot = [m.hours(), m.minutes(), m.seconds()];
+                var days = m.days();
+                if (days) {
+                    oot.unshift(days);
+                }
+                return oot.map(TimerMenuItem.format).join(':');
+        }
+    };
+    return TimerMenuItem;
+}(ReadiableMenuItem_ReadiableMenuItem));
+
+
+// CONCATENATED MODULE: ./src/lib/timers/exploring.ts
+
+
+
+
+
+
+var exploring_ExplorationTimer = /** @class */ (function (_super) {
+    __extends(ExplorationTimer, _super);
+    function ExplorationTimer() {
+        return _super.call(this, '/images/exploringSkill.png') || this;
+    }
+    ExplorationTimer.prototype.computeValue = function () {
+        return getGameValue('explorerCooldown').pipe(Object(external_rxjs_operators_["map"])(times1k));
+    };
+    ExplorationTimer.prototype.getOnClick = function () {
+        return function () {
+            navigate_navigate("exploring" /* EXPLORATION */);
+        };
+    };
+    return ExplorationTimer;
+}(TimerMenuItem_TimerMenuItem));
+var explorationTimer = new exploring_ExplorationTimer();
+
+// CONCATENATED MODULE: ./src/lib/structures/PatchTimer.ts
+
+
+
+
+
+
+
+var PatchTimer_PatchTimer = /** @class */ (function (_super) {
+    __extends(PatchTimer, _super);
     function PatchTimer(imgUrl, prefix, label) {
         var _this = _super.call(this, imgUrl, label) || this;
         _this.prefix = prefix;
@@ -1744,8 +1422,8 @@ var PatchTimer = /** @class */ (function (_super) {
     }
     PatchTimer.prototype.getAvailablePatches = function () {
         var _this = this;
-        var o$ = Object(lodash_es__WEBPACK_IMPORTED_MODULE_1__["range"])(1, 7).map(function (i) { return Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_5__["getGameValue"])(_this.prefix + "Unlocked" + i); });
-        return rxjs__WEBPACK_IMPORTED_MODULE_2__["combineLatest"].apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](o$)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (unlockStates) {
+        var o$ = Object(external_["range"])(1, 7).map(function (i) { return getGameValue(_this.prefix + "Unlocked" + i); });
+        return external_rxjs_["combineLatest"].apply(void 0, __spread(o$)).pipe(Object(external_rxjs_operators_["map"])(function (unlockStates) {
             var out = [];
             for (var i = 0; i < unlockStates.length; i++) {
                 if (unlockStates[i]) {
@@ -1753,19 +1431,19 @@ var PatchTimer = /** @class */ (function (_super) {
                 }
             }
             return out;
-        }), Object(_fn_distinctUntilObjectChanged__WEBPACK_IMPORTED_MODULE_4__["distinctUntilObjectChanged"])());
+        }), distinctUntilObjectChanged());
     };
     PatchTimer.prototype.computeValue = function () {
         var _this = this;
-        return this.getAvailablePatches().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function (indices) {
-            return rxjs__WEBPACK_IMPORTED_MODULE_2__["combineLatest"].apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](indices.map(function (i) { return Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_5__["getGameValue"])(_this.prefix + "Timer" + i); })));
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (allTimes) {
+        return this.getAvailablePatches().pipe(Object(external_rxjs_operators_["switchMap"])(function (indices) {
+            return external_rxjs_["combineLatest"].apply(void 0, __spread(indices.map(function (i) { return getGameValue(_this.prefix + "Timer" + i); })));
+        }), Object(external_rxjs_operators_["map"])(function (allTimes) {
             var filteredTimes = allTimes.map(timeFn).filter(filterInvalids);
-            return filteredTimes.length ? Math.min.apply(Math, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](filteredTimes)) : -1;
+            return filteredTimes.length ? Math.min.apply(Math, __spread(filteredTimes)) : -1;
         }));
     };
     return PatchTimer;
-}(_TimerMenuItem__WEBPACK_IMPORTED_MODULE_6__["TimerMenuItem"]));
+}(TimerMenuItem_TimerMenuItem));
 
 function timeFn(val) {
     if (val === 1) {
@@ -1782,439 +1460,44 @@ function filterInvalids(v) {
     return v !== -1;
 }
 
+// CONCATENATED MODULE: ./src/lib/timers/farming.ts
 
-/***/ }),
 
-/***/ "./src/lib/structures/ReadiableMenuItem.ts":
-/*!*************************************************!*\
-  !*** ./src/lib/structures/ReadiableMenuItem.ts ***!
-  \*************************************************/
-/*! exports provided: ReadiableMenuItem */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadiableMenuItem", function() { return ReadiableMenuItem; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _ValuedMenuItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ValuedMenuItem */ "./src/lib/structures/ValuedMenuItem.ts");
-
-
-
-var ReadiableMenuItem = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ReadiableMenuItem, _super);
-    function ReadiableMenuItem(imgUrl, label) {
-        var _this = _super.call(this, imgUrl, label) || this;
-        var classes = _this.innerContainer.classList;
-        _this.isReady().subscribe(function (ready) {
-            if (ready) {
-                classes.remove('btn-dark');
-                classes.add.apply(classes, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_this.getReadyClasses()));
-            }
-            else {
-                classes.remove.apply(classes, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_this.getReadyClasses()));
-                classes.add('btn-dark');
-            }
-        });
-        return _this;
-    }
-    ReadiableMenuItem.prototype.isReady = function () {
-        return this.getValueObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(this.readyMapper, this), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["distinctUntilChanged"])());
-    };
-    ReadiableMenuItem.prototype.getReadyClasses = function () {
-        return ['btn-success'];
-    };
-    return ReadiableMenuItem;
-}(_ValuedMenuItem__WEBPACK_IMPORTED_MODULE_2__["ValuedMenuItem"]));
-
-
-
-/***/ }),
-
-/***/ "./src/lib/structures/TimerMenuItem.ts":
-/*!*********************************************!*\
-  !*** ./src/lib/structures/TimerMenuItem.ts ***!
-  \*********************************************/
-/*! exports provided: TimerMenuItem */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimerMenuItem", function() { return TimerMenuItem; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es */ "lodash-es");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_es__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "moment");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _ReadiableMenuItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ReadiableMenuItem */ "./src/lib/structures/ReadiableMenuItem.ts");
-
-
-
-
-var TimerMenuItem = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](TimerMenuItem, _super);
-    function TimerMenuItem() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    TimerMenuItem.format = function (v) {
-        return Object(lodash_es__WEBPACK_IMPORTED_MODULE_1__["padStart"])(v.toString(), 2, '0');
-    };
-    TimerMenuItem.prototype.readyMapper = function (value) {
-        return value === 0;
-    };
-    TimerMenuItem.prototype.valueStringifier = function (millis) {
-        switch (millis) {
-            case 0:
-                return 'ready';
-            case -1:
-                return '??';
-            default:
-                var m = Object(moment__WEBPACK_IMPORTED_MODULE_2__["duration"])(millis);
-                var oot = [m.hours(), m.minutes(), m.seconds()];
-                var days = m.days();
-                if (days) {
-                    oot.unshift(days);
-                }
-                return oot.map(TimerMenuItem.format).join(':');
-        }
-    };
-    return TimerMenuItem;
-}(_ReadiableMenuItem__WEBPACK_IMPORTED_MODULE_3__["ReadiableMenuItem"]));
-
-
-
-/***/ }),
-
-/***/ "./src/lib/structures/ValuedMenuItem.ts":
-/*!**********************************************!*\
-  !*** ./src/lib/structures/ValuedMenuItem.ts ***!
-  \**********************************************/
-/*! exports provided: ValuedMenuItem */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValuedMenuItem", function() { return ValuedMenuItem; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "rxjs");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! typescript-lazy-get-decorator */ "./node_modules/typescript-lazy-get-decorator/esm5/LazyGetter.js");
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-/* harmony import */ var _fn_addCssClasses__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../fn/addCssClasses */ "./src/lib/fn/addCssClasses.ts");
-/* harmony import */ var _fn_addStyle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../fn/addStyle */ "./src/lib/fn/addStyle.ts");
-/* harmony import */ var _fn_distinctUntilObjectChanged__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../fn/distinctUntilObjectChanged */ "./src/lib/fn/distinctUntilObjectChanged.ts");
-/* harmony import */ var _fn_mkSpan__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../fn/mkSpan */ "./src/lib/fn/mkSpan.ts");
-/* harmony import */ var _IconMenuItem__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./IconMenuItem */ "./src/lib/structures/IconMenuItem.ts");
-
-
-
-
-
-
-
-
-
-
-var _value = Symbol('value');
-var ValuedMenuItem = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ValuedMenuItem, _super);
-    function ValuedMenuItem(imgUrl, label) {
-        var _this = _super.call(this, imgUrl, label) || this;
-        _this.innerContainer.appendChild(_this.valueElement);
-        Object(_fn_addStyle__WEBPACK_IMPORTED_MODULE_6__["addStyle"])(_this.root, _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_4__["GM"].getResourceText("bs_css" /* BS_CSS */));
-        _this.initTextObservable()
-            .subscribe(function (value) {
-            _this.valueElement.innerHTML = value;
-        });
-        setTimeout(function () {
-            var initialValue = _this.computeValue();
-            if (Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["isObservable"])(initialValue)) {
-                initialValue
-                    .pipe(Object(_fn_distinctUntilObjectChanged__WEBPACK_IMPORTED_MODULE_7__["distinctUntilObjectChanged"])())
-                    .subscribe(function (v) {
-                    _this.value = v;
-                });
-            }
-            else {
-                Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["timer"])(0, 1000)
-                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function () { return _this.computeValue(); }), Object(_fn_distinctUntilObjectChanged__WEBPACK_IMPORTED_MODULE_7__["distinctUntilObjectChanged"])())
-                    .subscribe(function () {
-                    _this.value = _this.computeValue();
-                });
-            }
-        }, 1);
-        return _this;
-    }
-    Object.defineProperty(ValuedMenuItem.prototype, "value", {
-        get: function () {
-            return this[_value].value;
-        },
-        set: function (v) {
-            this[_value].next(v);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ValuedMenuItem.prototype, "valueElement", {
-        get: function () {
-            return Object(_fn_addCssClasses__WEBPACK_IMPORTED_MODULE_5__["addCssClases"])(Object(_fn_mkSpan__WEBPACK_IMPORTED_MODULE_8__["mkSpan"])('??'), 'item');
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ValuedMenuItem.prototype, _a = _value, {
-        get: function () {
-            return new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](null);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    ValuedMenuItem.prototype.getValueObservable = function () {
-        return this[_value].pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["shareReplay"])());
-    };
-    ValuedMenuItem.prototype.initTextObservable = function () {
-        return this.getValueObservable()
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(this.valueStringifier, this), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["startWith"])('??'), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["distinctUntilChanged"])());
-    };
-    ValuedMenuItem.prototype.valueStringifier = function (value) {
-        //tslint:disable-next-line:triple-equals
-        return value == null ? '??' : value.toLocaleString();
-    };
-    var _a;
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_3__["LazyGetter"])()
-    ], ValuedMenuItem.prototype, "valueElement", null);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(typescript_lazy_get_decorator__WEBPACK_IMPORTED_MODULE_3__["LazyGetter"])()
-    ], ValuedMenuItem.prototype, _a, null);
-    return ValuedMenuItem;
-}(_IconMenuItem__WEBPACK_IMPORTED_MODULE_9__["IconMenuItem"]));
-
-
-
-/***/ }),
-
-/***/ "./src/lib/styles/IconMenuItemBase.scss":
-/*!**********************************************!*\
-  !*** ./src/lib/styles/IconMenuItemBase.scss ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ":host{background:transparent;display:inline-block;font-size:12px;margin-top:5px;margin-bottom:5px}img.item{height:1em;width:1em}.item{display:inline-block;margin-left:3.33px}.item:first-child,.item:empty:not(input){margin-left:0}span.item:empty{display:none}\n"
-
-/***/ }),
-
-/***/ "./src/lib/styles/main-menu.scss":
-/*!***************************************!*\
-  !*** ./src/lib/styles/main-menu.scss ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ":host{display:block;background:rgba(0,0,0,0.5);padding:5px;border-radius:5px}hr{margin:0;border-width:1px 0 0 0;border-color:#fff}ul.inline{padding-left:0;margin-top:5px;margin-bottom:5px;margin-left:-5px;list-style:none}ul.inline>li{display:inline-block;padding-right:5px;padding-left:5px}@media (min-width: 1000px){:host{position:fixed;top:5px;left:5px;width:230px;box-shadow:2px 2px 10px 0 #000;background:rgba(0,0,0,0.2);border:1px ridge silver}}@media (min-width: 1100px){:host{width:280px}}@media (min-width: 1200px){:host{width:330px}}@media (min-width: 1300px){:host{width:380px}}@media (min-width: 1400px){:host{width:430px}}@media (min-width: 1500px){:host{width:480px}}@media (min-width: 1600px){:host{width:530px}}@media (min-width: 1700px){:host{width:580px}}@media (min-width: 1800px){:host{width:630px}}@media (min-width: 1900px){:host{width:680px}}\n"
-
-/***/ }),
-
-/***/ "./src/lib/timers/crafting.ts":
-/*!************************************!*\
-  !*** ./src/lib/timers/crafting.ts ***!
-  \************************************/
-/*! exports provided: craftingTimer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "craftingTimer", function() { return craftingTimer; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "rxjs");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
-/* harmony import */ var _fn_navigate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../fn/navigate */ "./src/lib/fn/navigate.ts");
-/* harmony import */ var _structures_ReadiableMenuItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../structures/ReadiableMenuItem */ "./src/lib/structures/ReadiableMenuItem.ts");
-
-
-
-
-
-
-var CraftingTimer = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](CraftingTimer, _super);
-    function CraftingTimer() {
-        return _super.call(this, '/images/craftingSkill.png') || this;
-    }
-    CraftingTimer.prototype.computeValue = function () {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["combineLatest"])(Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_3__["getGameValue"])('smeltingCurrentOreTo'), Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_3__["getGameValue"])('smeltingCurrentOreAt'))
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (_a) {
-            var _b = tslib__WEBPACK_IMPORTED_MODULE_0__["__read"](_a, 2), to = _b[0], at = _b[1];
-            return to - at;
-        }));
-    };
-    CraftingTimer.prototype.getOnClick = function () {
-        return function () {
-            Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_4__["navigate"])("crafting" /* CRAFTING */);
-        };
-    };
-    CraftingTimer.prototype.readyMapper = function (value) {
-        return value === 0;
-    };
-    CraftingTimer.prototype.valueStringifier = function (value) {
-        return value === -1 ? '??' : this.readyMapper(value) ? 'ready' : _super.prototype.valueStringifier.call(this, value);
-    };
-    return CraftingTimer;
-}(_structures_ReadiableMenuItem__WEBPACK_IMPORTED_MODULE_5__["ReadiableMenuItem"]));
-var craftingTimer = new CraftingTimer();
-
-
-/***/ }),
-
-/***/ "./src/lib/timers/exploring.ts":
-/*!*************************************!*\
-  !*** ./src/lib/timers/exploring.ts ***!
-  \*************************************/
-/*! exports provided: explorationTimer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "explorationTimer", function() { return explorationTimer; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fn_getGameValue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../fn/getGameValue */ "./src/lib/fn/getGameValue.ts");
-/* harmony import */ var _fn_navigate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../fn/navigate */ "./src/lib/fn/navigate.ts");
-/* harmony import */ var _fn_times1k__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../fn/times1k */ "./src/lib/fn/times1k.ts");
-/* harmony import */ var _structures_TimerMenuItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../structures/TimerMenuItem */ "./src/lib/structures/TimerMenuItem.ts");
-
-
-
-
-
-
-var ExplorationTimer = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ExplorationTimer, _super);
-    function ExplorationTimer() {
-        return _super.call(this, '/images/exploringSkill.png') || this;
-    }
-    ExplorationTimer.prototype.computeValue = function () {
-        return Object(_fn_getGameValue__WEBPACK_IMPORTED_MODULE_2__["getGameValue"])('explorerCooldown').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(_fn_times1k__WEBPACK_IMPORTED_MODULE_4__["times1k"]));
-    };
-    ExplorationTimer.prototype.getOnClick = function () {
-        return function () {
-            Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_3__["navigate"])("exploring" /* EXPLORATION */);
-        };
-    };
-    return ExplorationTimer;
-}(_structures_TimerMenuItem__WEBPACK_IMPORTED_MODULE_5__["TimerMenuItem"]));
-var explorationTimer = new ExplorationTimer();
-
-
-/***/ }),
-
-/***/ "./src/lib/timers/farming.ts":
-/*!***********************************!*\
-  !*** ./src/lib/timers/farming.ts ***!
-  \***********************************/
-/*! exports provided: farmingTimer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "farmingTimer", function() { return farmingTimer; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _fn_navigate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../fn/navigate */ "./src/lib/fn/navigate.ts");
-/* harmony import */ var _structures_PatchTimer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../structures/PatchTimer */ "./src/lib/structures/PatchTimer.ts");
-
-
-
-var FarmingTimer = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](FarmingTimer, _super);
+var farming_FarmingTimer = /** @class */ (function (_super) {
+    __extends(FarmingTimer, _super);
     function FarmingTimer() {
         return _super.call(this, '/images/farmingSkill.png', 'farm') || this;
     }
     FarmingTimer.prototype.getOnClick = function () {
         return function () {
-            Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_1__["navigate"])("farming" /* FARMING */);
+            navigate_navigate("farming" /* FARMING */);
         };
     };
     return FarmingTimer;
-}(_structures_PatchTimer__WEBPACK_IMPORTED_MODULE_2__["PatchTimer"]));
-var farmingTimer = new FarmingTimer();
+}(PatchTimer_PatchTimer));
+var farmingTimer = new farming_FarmingTimer();
 
-
-/***/ }),
-
-/***/ "./src/lib/timers/woodcutting.ts":
-/*!***************************************!*\
-  !*** ./src/lib/timers/woodcutting.ts ***!
-  \***************************************/
-/*! exports provided: woodcuttingTimer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "woodcuttingTimer", function() { return woodcuttingTimer; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _fn_navigate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../fn/navigate */ "./src/lib/fn/navigate.ts");
-/* harmony import */ var _structures_PatchTimer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../structures/PatchTimer */ "./src/lib/structures/PatchTimer.ts");
+// CONCATENATED MODULE: ./src/lib/timers/woodcutting.ts
 
 
 
-var WoodcuttingTimer = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](WoodcuttingTimer, _super);
+var woodcutting_WoodcuttingTimer = /** @class */ (function (_super) {
+    __extends(WoodcuttingTimer, _super);
     function WoodcuttingTimer() {
         return _super.call(this, '/images/woodcuttingSkill.png', 'tree') || this;
     }
     WoodcuttingTimer.prototype.getOnClick = function () {
         return function () {
-            Object(_fn_navigate__WEBPACK_IMPORTED_MODULE_1__["navigate"])("woodcutting" /* WOODCUTTING */);
+            navigate_navigate("woodcutting" /* WOODCUTTING */);
         };
     };
     return WoodcuttingTimer;
-}(_structures_PatchTimer__WEBPACK_IMPORTED_MODULE_2__["PatchTimer"]));
-var woodcuttingTimer = new WoodcuttingTimer();
+}(PatchTimer_PatchTimer));
+var woodcuttingTimer = new woodcutting_WoodcuttingTimer();
 
-
-/***/ }),
-
-/***/ "./src/postLogin.ts":
-/*!**************************!*\
-  !*** ./src/postLogin.ts ***!
-  \**************************/
-/*! exports provided: initUI */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
+// CONCATENATED MODULE: ./src/postLogin.ts
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initUI", function() { return initUI; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./interfaces/greasemonkey */ "./src/interfaces/greasemonkey.ts");
-/* harmony import */ var _lib_fn_addCssClasses__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/fn/addCssClasses */ "./src/lib/fn/addCssClasses.ts");
-/* harmony import */ var _lib_fn_insertAfter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/fn/insertAfter */ "./src/lib/fn/insertAfter.ts");
-/* harmony import */ var _lib_fn_mkElement__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/fn/mkElement */ "./src/lib/fn/mkElement.ts");
-/* harmony import */ var _lib_fn_mkList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lib/fn/mkList */ "./src/lib/fn/mkList.ts");
-/* harmony import */ var _lib_fn_mkSpan__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./lib/fn/mkSpan */ "./src/lib/fn/mkSpan.ts");
-/* harmony import */ var _lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./lib/fn/navigate */ "./src/lib/fn/navigate.ts");
-/* harmony import */ var _lib_items_bars__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lib/items/bars */ "./src/lib/items/bars.ts");
-/* harmony import */ var _lib_items_bonez__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lib/items/bonez */ "./src/lib/items/bonez.ts");
-/* harmony import */ var _lib_items_cookedFood__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lib/items/cookedFood */ "./src/lib/items/cookedFood.ts");
-/* harmony import */ var _lib_items_exploringGoodies__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lib/items/exploringGoodies */ "./src/lib/items/exploringGoodies.ts");
-/* harmony import */ var _lib_items_herbs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lib/items/herbs */ "./src/lib/items/herbs.ts");
-/* harmony import */ var _lib_items_logs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./lib/items/logs */ "./src/lib/items/logs.ts");
-/* harmony import */ var _lib_items_ores__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./lib/items/ores */ "./src/lib/items/ores.ts");
-/* harmony import */ var _lib_items_potions__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lib/items/potions */ "./src/lib/items/potions.ts");
-/* harmony import */ var _lib_items_rares__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./lib/items/rares */ "./src/lib/items/rares.ts");
-/* harmony import */ var _lib_items_rawFood__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./lib/items/rawFood */ "./src/lib/items/rawFood.ts");
-/* harmony import */ var _lib_items_seeds__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./lib/items/seeds */ "./src/lib/items/seeds.ts");
-/* harmony import */ var _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./lib/timers/crafting */ "./src/lib/timers/crafting.ts");
-/* harmony import */ var _lib_timers_exploring__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./lib/timers/exploring */ "./src/lib/timers/exploring.ts");
-/* harmony import */ var _lib_timers_farming__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./lib/timers/farming */ "./src/lib/timers/farming.ts");
-/* harmony import */ var _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./lib/timers/woodcutting */ "./src/lib/timers/woodcutting.ts");
 
 
 
@@ -2239,92 +1522,81 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var dashboard = document.createElement('div');
-var mkList = Object(_lib_fn_mkList__WEBPACK_IMPORTED_MODULE_5__["createMkListFn"])(dashboard);
-mkList(_lib_timers_exploring__WEBPACK_IMPORTED_MODULE_20__["explorationTimer"], _lib_timers_crafting__WEBPACK_IMPORTED_MODULE_19__["craftingTimer"], _lib_timers_woodcutting__WEBPACK_IMPORTED_MODULE_22__["woodcuttingTimer"], _lib_timers_farming__WEBPACK_IMPORTED_MODULE_21__["farmingTimer"]);
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_rares__WEBPACK_IMPORTED_MODULE_16__["rareCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_ores__WEBPACK_IMPORTED_MODULE_14__["oreCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_seeds__WEBPACK_IMPORTED_MODULE_18__["seedCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_bonez__WEBPACK_IMPORTED_MODULE_9__["boneCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_bars__WEBPACK_IMPORTED_MODULE_8__["barCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_logs__WEBPACK_IMPORTED_MODULE_13__["logCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_herbs__WEBPACK_IMPORTED_MODULE_12__["herbCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_potions__WEBPACK_IMPORTED_MODULE_15__["potionCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_rawFood__WEBPACK_IMPORTED_MODULE_17__["rawFoodCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_cookedFood__WEBPACK_IMPORTED_MODULE_10__["cookedFoodCounts"]));
-mkList.apply(void 0, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_lib_items_exploringGoodies__WEBPACK_IMPORTED_MODULE_11__["exploringGoodies"]));
+var postLogin_mkList = createMkListFn(dashboard);
+postLogin_mkList(explorationTimer, craftingTimer, woodcuttingTimer, farmingTimer);
+postLogin_mkList.apply(void 0, __spread(rareCounts));
+postLogin_mkList.apply(void 0, __spread(oreCounts));
+postLogin_mkList.apply(void 0, __spread(seedCounts));
+postLogin_mkList.apply(void 0, __spread(boneCounts));
+postLogin_mkList.apply(void 0, __spread(barCounts));
+postLogin_mkList.apply(void 0, __spread(logCounts));
+postLogin_mkList.apply(void 0, __spread(herbCounts));
+postLogin_mkList.apply(void 0, __spread(potionCounts));
+postLogin_mkList.apply(void 0, __spread(rawFoodCounts));
+postLogin_mkList.apply(void 0, __spread(cookedFoodCounts));
+postLogin_mkList.apply(void 0, __spread(exploringGoodies));
 function initUI(el) {
-    Object(_lib_fn_insertAfter__WEBPACK_IMPORTED_MODULE_3__["insertAfter"])(dashboard, el);
+    insertAfter(dashboard, el);
 }
 try {
-    var script = _interfaces_greasemonkey__WEBPACK_IMPORTED_MODULE_1__["GM"].info.script;
+    var script = GM.info.script;
     var version = script.version, name_1 = script.name, homepage = script.homepage;
-    mkList.root.appendChild(document.createElement('hr'));
-    var container = Object(_lib_fn_addCssClasses__WEBPACK_IMPORTED_MODULE_2__["addCssClases"])('div', 'text-center', 'small');
-    container.appendChild(Object(_lib_fn_mkSpan__WEBPACK_IMPORTED_MODULE_6__["mkSpan"])(name_1 + " v" + version + " by "));
-    var a = Object(_lib_fn_mkElement__WEBPACK_IMPORTED_MODULE_4__["mkElement"])('a', 'Alorel');
-    a.href = homepage;
-    a.target = '_blank';
-    container.appendChild(a);
-    mkList.root.appendChild(container);
+    postLogin_mkList.root.appendChild(document.createElement('hr'));
+    var postLogin_container = addCssClases('div', 'text-center', 'small');
+    postLogin_container.appendChild(mkSpan(name_1 + " v" + version + " by "));
+    var postLogin_a = mkElement('a', 'Alorel');
+    postLogin_a.href = homepage;
+    postLogin_a.target = '_blank';
+    postLogin_container.appendChild(postLogin_a);
+    postLogin_mkList.root.appendChild(postLogin_container);
 }
 catch (_a) {
     //noop
 }
-Object(_lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__["navigate"])("woodcutting" /* WOODCUTTING */);
-Object(_lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__["navigate"])("farming" /* FARMING */);
-Object(_lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__["navigate"])("exploring" /* EXPLORATION */);
-Object(_lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__["navigate"])("mining" /* MINING */);
-Object(_lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__["navigate"])("cooking" /* COOKING */);
-Object(_lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__["navigate"])("crafting" /* CRAFTING */);
-Object(_lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__["navigate"])("main" /* MAIN */);
-Object(_lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__["navigate"])("brew" /* BREW */);
-Object(_lib_fn_navigate__WEBPACK_IMPORTED_MODULE_7__["navigate"])("brewing" /* BREWING */);
+navigate_navigate("woodcutting" /* WOODCUTTING */);
+navigate_navigate("farming" /* FARMING */);
+navigate_navigate("exploring" /* EXPLORATION */);
+navigate_navigate("mining" /* MINING */);
+navigate_navigate("cooking" /* COOKING */);
+navigate_navigate("crafting" /* CRAFTING */);
+navigate_navigate("main" /* MAIN */);
+navigate_navigate("brew" /* BREW */);
+navigate_navigate("brewing" /* BREWING */);
 
 
 /***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/***/ "lodash-es":
-/*!********************!*\
-  !*** external "_" ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 
-module.exports = _;
+// CONCATENATED MODULE: ./src/lib/fn/isLoggedIn.ts
+function isLoggedIn() {
+    var gameWindow = document.getElementById('game-screen');
+    return !!gameWindow && getComputedStyle(gameWindow).display !== 'none';
+}
 
-/***/ }),
+// CONCATENATED MODULE: ./src/dhm-dashboard.user.ts
 
-/***/ "moment":
-/*!*************************!*\
-  !*** external "moment" ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+var loginInterval = setInterval(function () {
+    var el = document.getElementById('top-status-bar');
+    if (el && isLoggedIn()) {
+        __webpack_require__(6).initUI(el);
+        clearInterval(loginInterval);
+    }
+}, 1000);
+// Tweak and fix icon
+var icon = document.querySelector('link[rel="icon"]');
+if (icon) {
+    icon.href = '/images/ruby.png';
+}
+//The icon gets appended to doc body atm, which is wrong
+icon = document.querySelector('body link[rel="icon"]');
+if (icon) {
+    document.head.appendChild(icon);
+}
 
-module.exports = moment;
-
-/***/ }),
-
-/***/ "rxjs":
-/*!***********************!*\
-  !*** external "rxjs" ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = rxjs;
-
-/***/ }),
-
-/***/ "rxjs/operators":
-/*!*************************************!*\
-  !*** external ["rxjs","operators"] ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = rxjs["operators"];
 
 /***/ })
-
-/******/ });
+/******/ ]);
