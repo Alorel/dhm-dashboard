@@ -1,9 +1,6 @@
 # Diamondhunt Mobile Dashboard Userscript
-Screw tabs - have everything in one place.
 
------
-
-[![Preview](https://i.imgur.com/RDNJ4dQ.gif)](https://imgur.com/RDNJ4dQ)
+[[Preview](https://imgur.com/RDNJ4dQ)] Screw tabs - have everything in one place.
 
 # Browser compatibility
 This was only tested on the latest version of Chrome. Bug reports from inferior browsers will be ignored.
