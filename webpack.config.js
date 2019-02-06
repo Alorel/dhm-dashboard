@@ -12,7 +12,8 @@ const prod = !!process.env.WP_MINIMISE;
 const baseConf = {
   target: 'web',
   entry: join(__dirname, 'src', 'dhm-dashboard.user.ts'),
-  mode: 'development',
+  mode: 'production',
+  optimization: {},
   devtool: false,
   output: {
     path: join(__dirname, 'dist'),
@@ -80,7 +81,7 @@ if (prod) {
   ].join(',');
 
   conf.mode = 'production';
-  _.set(conf, 'optimization.minimizer', [
+  conf.optimization.minimizer = [
     new TerserPlugin({
       parallel: true,
       sourceMap: false,
@@ -90,7 +91,7 @@ if (prod) {
         }
       }
     })
-  ]);
+  ];
   conf.output.filename = 'dhm-dashboard.min.user.js';
 
   conf.plugins.push(
@@ -115,5 +116,6 @@ baseConf.plugins.push(
     raw: true
   })
 );
+baseConf.optimization.minimize = false;
 
 module.exports = out;

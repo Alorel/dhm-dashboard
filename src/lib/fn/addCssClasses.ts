@@ -10,5 +10,3 @@ export function addCssClases(el: any, ...classes: string[]): any {
 
   return el;
 }
-
-document.createElement('div');
