@@ -24,7 +24,7 @@
     "cross-env": "^5.2.0",
     "fs-extra": "^8.1.0",
     "lodash": "^4.17.14",
-    "lodash-es": "^4.17.14",
+    "lodash-es": "^4.17.21",
     "moment": "^2.24.0",
     "node-sass": "^7.0.0",
     "raw-loader": "^1.0.0",
